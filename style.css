@@ -27,7 +27,6 @@ body {
 
   height: 100vh;
   height: 100svh;
-  height: 100dvh;
 
   display: flex;
   flex-direction: column;
@@ -101,14 +100,17 @@ body {
   transform: translateY(2.5dvh);
 }
 
-/* ===== ロゴ（モバイル：画面に固定） ===== */
+/* ===== ロゴ：hero 内での絶対配置（スクロールで一緒に流れる） ===== */
 .hero-logo {
-  position: fixed; /* ← absolute → fixed に変更 */
+  position: absolute;
   left: 50%;
-  bottom: 13vh; /* ← vh 1本に統一（svh/dvhは外す） */
-  transform: translateX(-50%); /* ← 縦方向の -10% は一旦外す */
 
-  z-index: 999; /* 他より前に出したいので少し強めに */
+  /* ← dvh はやめて、vh / svh に統一 */
+  bottom: 13vh;
+  bottom: 13svh;
+
+  transform: translate(-50%, -10%);
+  z-index: 4;
 
   width: clamp(360px, 70vw, 780px);
   height: auto;
@@ -171,7 +173,7 @@ body {
 /* ===== 高さが短い端末（SEなど） ===== */
 @media (max-width: 360px) {
   .hero-logo {
-    bottom: -0.5dvh;
+    bottom: 9vh;
   }
 }
 
