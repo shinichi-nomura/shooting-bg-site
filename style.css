@@ -172,7 +172,7 @@ body {
 }
 
 /* ===== 高さが短い端末（SEなど） ===== */
-@media (max-height: 700px) {
+@media (max-width: 360px) {
   .hero-logo {
     bottom: -0.5dvh;
   }
