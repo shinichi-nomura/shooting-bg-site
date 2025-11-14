@@ -1,4 +1,16 @@
+/* 【★追加】ブラウザの安定した高さを取得し、CSS変数にセットする関数 */
+const setAppHeight = () => {
+  // ブラウザのビューポートの高さを取得
+  const doc = document.documentElement;
+  // CSSカスタムプロパティ --app-height に設定
+  doc.style.setProperty("--app-height", `${window.innerHeight}px`);
+};
+
 document.addEventListener("DOMContentLoaded", () => {
+  /* 【★追加】ページロード時とリサイズ（アドレスバーの表示切替含む）時に高さを設定 */
+  setAppHeight();
+  window.addEventListener("resize", setAppHeight);
+
   /* ===== TOPへロボ：ページ最上部へスクロール ===== */
   const topHelperBtn = document.querySelector(".top-helper");
 

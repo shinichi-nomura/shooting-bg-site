@@ -21,13 +21,20 @@ body {
   background: #fff;
 }
 
+/* 【★追加・変更】JSで設定するカスタムプロパティを定義 */
+:root {
+  --app-height: 100vh;
+}
+
 /* ===== HERO（モバイル＝375×812 基準） ===== */
 .hero {
   position: relative;
 
-  height: 100vh;
-  height: 100svh;
-  height: 100dvh;
+  /* 【★変更】JSで取得した安定した高さを適用 */
+  height: var(--app-height);
+  /* height: 100vh; */
+  /* height: 100svh; */
+  /* height: 100dvh; */
 
   display: flex;
   flex-direction: column;
@@ -37,9 +44,10 @@ body {
   text-align: center;
   overflow: hidden;
 
-  padding-top: 7vh;
-  padding-top: 7svh;
   padding-top: 7dvh;
+  /* padding-top: 7vh; */
+  /* padding-top: 7svh; */
+  /* padding-top: 7dvh; */
 
   z-index: 2;
 }
@@ -95,10 +103,13 @@ body {
   height: auto;
 
   object-fit: cover;
+  
+  /* 【★変更】高さの最大値を設定し、ロゴの領域を確保 */
+  max-width: 90%; 
+  max-height: 70svh;
 
-  transform: translateY(2.5vh);
-  transform: translateY(2.5svh);
-  transform: translateY(2.5dvh);
+  /* 【★変更】固定のピクセル値で微調整 */
+  transform: translateY(10px);
 }
 
 /* ===== ロゴ ===== */
@@ -106,11 +117,11 @@ body {
   position: absolute;
   left: 50%;
 
-  bottom: 13vh;
-  bottom: 13svh;
-  bottom: 13dvh;
+  /* 【★変更】固定のピクセル値で下端からの距離を固定 */
+  bottom: 25px; 
 
-  transform: translate(-50%, -10%);
+  /* 【★変更】X軸方向の中央寄せのみに修正 */
+  transform: translateX(-50%);
   z-index: 4;
 
   width: clamp(360px, 70vw, 780px);
@@ -133,9 +144,10 @@ body {
 /* ===== PC（768px以上） ===== */
 @media (min-width: 768px) {
   .hero {
-    padding-top: 10vh;
-    padding-top: 10svh;
     padding-top: 10dvh;
+    /* padding-top: 10vh; */
+    /* padding-top: 10svh; */
+    /* padding-top: 10dvh; */
   }
 
   .hero-illust {
@@ -144,17 +156,13 @@ body {
     max-height: 80vh;
     object-fit: contain;
 
-    transform: translateY(3vh);
-    transform: translateY(3svh);
-    transform: translateY(3dvh);
+    transform: translateY(15px);
   }
 
   .hero-logo {
-    bottom: 3vh;
-    bottom: 3svh;
-    bottom: 3dvh;
-
-    transform: translate(-50%, -18%);
+    /* 【★変更】PCでも固定値で下端から配置 */
+    bottom: 30px; 
+    transform: translateX(-50%);
     width: clamp(440px, 48vw, 900px);
   }
 
@@ -172,11 +180,9 @@ body {
 }
 
 /* ===== 高さが短い端末（SEなど） ===== */
-@media (max-height: 700px) {
-  .hero-logo {
-    bottom: -0.5dvh;
-  }
-}
+/* 【★削除】固定値にしたため、このメディアクエリは不要 */
+/* @media (max-height: 700px) { ... } */
+
 
 /* ===== TOPへロボ（右下固定）===== */
 .top-helper {
