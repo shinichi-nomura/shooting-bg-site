@@ -101,17 +101,14 @@ body {
   transform: translateY(2.5dvh);
 }
 
-/* ===== ロゴ ===== */
+/* ===== ロゴ（モバイル：画面に固定） ===== */
 .hero-logo {
-  position: absolute;
+  position: fixed; /* ← absolute → fixed に変更 */
   left: 50%;
+  bottom: 13vh; /* ← vh 1本に統一（svh/dvhは外す） */
+  transform: translateX(-50%); /* ← 縦方向の -10% は一旦外す */
 
-  bottom: 13vh;
-  bottom: 13svh;
-  bottom: 13dvh;
-
-  transform: translate(-50%, -10%);
-  z-index: 4;
+  z-index: 999; /* 他より前に出したいので少し強めに */
 
   width: clamp(360px, 70vw, 780px);
   height: auto;
