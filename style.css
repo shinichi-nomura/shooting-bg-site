@@ -31,7 +31,7 @@ body {
   position: relative;
 
   /* 【ビューポート安定化】JSで取得した安定した高さを適用 */
-  height: var(--app-height);
+  height: var(--app-height); 
 
   display: flex;
   flex-direction: column;
@@ -63,6 +63,9 @@ body {
 
   pointer-events: none;
   z-index: 0;
+
+  /* 【★カクツキ対策】固定背景をGPU処理に強制 */
+  transform: translateZ(0);
 }
 
 /* アニメーション（右上 → 左下） */
@@ -93,18 +96,16 @@ body {
   z-index: 2;
   pointer-events: none;
 
-  /* 【横の隙間解消】100%に変更 */
-  width: 100%;
+  /* 【横の隙間解消】幅をわずかに広げる */
+  width: 100.1%;
   height: auto;
 
   object-fit: cover;
-
-  /* 【横の隙間解消】max-widthの制約を削除 */
-  /* max-width: 90%; */
-
+  
   max-height: 70svh;
 
-  transform: translateY(10px);
+  /* 【横の隙間解消】中央寄せのための微調整 */
+  transform: translate(-0.05%, 10px);
 }
 
 /* ===== ロゴ ===== */
@@ -112,19 +113,19 @@ body {
   position: absolute;
   left: 50%;
 
-  /* 【位置調整】150pxに維持（iPhone 15サイズ基準） */
-  bottom: 170px;
+  bottom: 130px; 
 
-  transform: translateX(-50%);
+  /* 【★カクツキ対策】transform: translateX(-50%) から translate3d に変更 */
+  transform: translate3d(-50%, 0, 0);
   z-index: 4;
 
   width: clamp(360px, 70vw, 780px);
   height: auto;
-
+  
   /* 【カクツキ対策】描画最適化を強制 */
   will-change: transform, opacity;
   backface-visibility: hidden;
-
+  
   pointer-events: none;
 
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18))
@@ -146,18 +147,17 @@ body {
   }
 
   .hero-illust {
-    /* 【横の隙間解消】PC版も調整 */
-    width: 100%;
-    /* max-width: 90vw; */
+    width: 100.1%;
     max-height: 80vh;
     object-fit: contain;
 
-    transform: translateY(15px);
+    transform: translate(-0.05%, 15px);
   }
 
   .hero-logo {
-    bottom: 150px;
-    transform: translateX(-50%);
+    /* 【★カクツキ対策】transform: translateX(-50%) から translate3d に変更 */
+    transform: translate3d(-50%, 0, 0);
+    bottom: 170px;
     width: clamp(440px, 48vw, 900px);
   }
 
@@ -230,7 +230,7 @@ body {
   width: 100%;
   position: relative;
   /* 【カクツキ対策】描画最適化を強制 */
-  will-change: height, transform;
+  will-change: height, transform; 
 }
 
 /* カード部分（タップ領域） */
@@ -255,15 +255,17 @@ body {
 /* アコーディオン中身（板＋ロボ画像） */
 .lesson-accordion__body {
   overflow: hidden;
-  height: 0; /* 閉じるときは0 */
-  transition: height 0.35s ease;
+  height: 0; 
+  /* 【★カクツキ対策】transformもtransition対象に追加 */
+  transition: height 0.35s ease, transform 0.35s ease;
 }
 
 .lesson-accordion__panel {
   display: block;
   width: 100%;
   height: auto;
-  transform: translateY(-20px); /* 上から落ちてくる感じ */
+  /* 【★カクツキ対策】translateYに translateZ(0) を追加 */
+  transform: translateZ(0) translateY(-20px); 
   opacity: 0;
   transition: transform 0.35s ease, opacity 0.35s ease;
   /* 【カクツキ対策】描画最適化を強制 */
@@ -272,7 +274,7 @@ body {
 
 /* 開いた状態（is-openクラスがJSで付く） */
 .lesson-accordion.is-open .lesson-accordion__panel {
-  transform: translateY(0);
+  transform: translateZ(0) translateY(0);
   opacity: 1;
 }
 
@@ -280,6 +282,6 @@ body {
 @media (max-height: 700px) and (max-width: 767px) {
   .hero-logo {
     /* 【iPhone SE対応】ロゴをさらに上に上げるため、bottomの値を増やす */
-    bottom: 60px;
+    bottom: 60px; 
   }
 }
