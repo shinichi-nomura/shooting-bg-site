@@ -64,7 +64,7 @@ body {
   pointer-events: none;
   z-index: 0;
 
-  /* 【★カクツキ対策】固定背景をGPU処理に強制 */
+  /* 【カクツキ対策】固定背景をGPU処理に強制 */
   transform: translateZ(0);
 }
 
@@ -113,9 +113,10 @@ body {
   position: absolute;
   left: 50%;
 
-  bottom: 130px; 
+  /* 【★レスポンシブ修正】モバイル基準値を120pxに下げる */
+  bottom: 120px; 
 
-  /* 【★カクツキ対策】transform: translateX(-50%) から translate3d に変更 */
+  /* 【カクツキ対策】translate3dを維持 */
   transform: translate3d(-50%, 0, 0);
   z-index: 4;
 
@@ -155,9 +156,9 @@ body {
   }
 
   .hero-logo {
-    /* 【★カクツキ対策】transform: translateX(-50%) から translate3d に変更 */
+    /* 【★レスポンシブ修正】PC版も120pxに下げる */
+    bottom: 120px;
     transform: translate3d(-50%, 0, 0);
-    bottom: 170px;
     width: clamp(440px, 48vw, 900px);
   }
 
@@ -256,7 +257,6 @@ body {
 .lesson-accordion__body {
   overflow: hidden;
   height: 0; 
-  /* 【★カクツキ対策】transformもtransition対象に追加 */
   transition: height 0.35s ease, transform 0.35s ease;
 }
 
@@ -264,7 +264,6 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  /* 【★カクツキ対策】translateYに translateZ(0) を追加 */
   transform: translateZ(0) translateY(-20px); 
   opacity: 0;
   transition: transform 0.35s ease, opacity 0.35s ease;
@@ -278,10 +277,10 @@ body {
   opacity: 1;
 }
 
-/* ===== 画面の高さが短い端末向けの調整 (例: iPhone SE対応) ===== */
+/* ===== 画面の高さが短い端末向けの調整 (iPhone SE対応) ===== */
 @media (max-height: 700px) and (max-width: 767px) {
   .hero-logo {
-    /* 【iPhone SE対応】ロゴをさらに上に上げるため、bottomの値を増やす */
-    bottom: 60px; 
+    /* 【★レスポンシブ修正】SEサイズも170pxに下げる */
+    bottom: 170px; 
   }
 }
