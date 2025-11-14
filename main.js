@@ -1,4 +1,4 @@
-/* 【★追加】ブラウザの安定した高さを取得し、CSS変数にセットする関数 */
+/* 【ビューポート安定化】ブラウザの安定した高さを取得し、CSS変数にセットする関数 */
 const setAppHeight = () => {
   // ブラウザのビューポートの高さを取得
   const doc = document.documentElement;
@@ -7,7 +7,7 @@ const setAppHeight = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  /* 【★追加】ページロード時とリサイズ（アドレスバーの表示切替含む）時に高さを設定 */
+  /* 【ビューポート安定化】ページロード時とリサイズ（アドレスバーの表示切替含む）時に高さを設定 */
   setAppHeight();
   window.addEventListener("resize", setAppHeight);
 

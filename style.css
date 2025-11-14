@@ -21,7 +21,7 @@ body {
   background: #fff;
 }
 
-/* 【★追加・変更】JSで設定するカスタムプロパティを定義 */
+/* 【ビューポート安定化】JSで設定するカスタムプロパティを定義 */
 :root {
   --app-height: 100vh;
 }
@@ -30,11 +30,8 @@ body {
 .hero {
   position: relative;
 
-  /* 【★変更】JSで取得した安定した高さを適用 */
+  /* 【ビューポート安定化】JSで取得した安定した高さを適用 */
   height: var(--app-height);
-  /* height: 100vh; */
-  /* height: 100svh; */
-  /* height: 100dvh; */
 
   display: flex;
   flex-direction: column;
@@ -45,9 +42,6 @@ body {
   overflow: hidden;
 
   padding-top: 7dvh;
-  /* padding-top: 7vh; */
-  /* padding-top: 7svh; */
-  /* padding-top: 7dvh; */
 
   z-index: 2;
 }
@@ -99,16 +93,17 @@ body {
   z-index: 2;
   pointer-events: none;
 
-  width: 100vw;
+  /* 【横の隙間解消】100%に変更 */
+  width: 100%;
   height: auto;
 
   object-fit: cover;
-  
-  /* 【★変更】高さの最大値を設定し、ロゴの領域を確保 */
-  max-width: 90%; 
+
+  /* 【横の隙間解消】max-widthの制約を削除 */
+  /* max-width: 90%; */
+
   max-height: 70svh;
 
-  /* 【★変更】固定のピクセル値で微調整 */
   transform: translateY(10px);
 }
 
@@ -117,15 +112,18 @@ body {
   position: absolute;
   left: 50%;
 
-  /* 【★変更】固定のピクセル値で下端からの距離を固定 */
-  bottom: 25px; 
+  /* 【位置調整】150pxに維持（iPhone 15サイズ基準） */
+  bottom: 170px;
 
-  /* 【★変更】X軸方向の中央寄せのみに修正 */
   transform: translateX(-50%);
   z-index: 4;
 
   width: clamp(360px, 70vw, 780px);
   height: auto;
+
+  /* 【カクツキ対策】描画最適化を強制 */
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 
   pointer-events: none;
 
@@ -145,14 +143,12 @@ body {
 @media (min-width: 768px) {
   .hero {
     padding-top: 10dvh;
-    /* padding-top: 10vh; */
-    /* padding-top: 10svh; */
-    /* padding-top: 10dvh; */
   }
 
   .hero-illust {
-    width: auto;
-    max-width: 90vw;
+    /* 【横の隙間解消】PC版も調整 */
+    width: 100%;
+    /* max-width: 90vw; */
     max-height: 80vh;
     object-fit: contain;
 
@@ -160,8 +156,7 @@ body {
   }
 
   .hero-logo {
-    /* 【★変更】PCでも固定値で下端から配置 */
-    bottom: 30px; 
+    bottom: 150px;
     transform: translateX(-50%);
     width: clamp(440px, 48vw, 900px);
   }
@@ -178,11 +173,6 @@ body {
     animation: none;
   }
 }
-
-/* ===== 高さが短い端末（SEなど） ===== */
-/* 【★削除】固定値にしたため、このメディアクエリは不要 */
-/* @media (max-height: 700px) { ... } */
-
 
 /* ===== TOPへロボ（右下固定）===== */
 .top-helper {
@@ -239,6 +229,8 @@ body {
 .lesson-accordion {
   width: 100%;
   position: relative;
+  /* 【カクツキ対策】描画最適化を強制 */
+  will-change: height, transform;
 }
 
 /* カード部分（タップ領域） */
@@ -274,10 +266,20 @@ body {
   transform: translateY(-20px); /* 上から落ちてくる感じ */
   opacity: 0;
   transition: transform 0.35s ease, opacity 0.35s ease;
+  /* 【カクツキ対策】描画最適化を強制 */
+  will-change: transform, opacity;
 }
 
 /* 開いた状態（is-openクラスがJSで付く） */
 .lesson-accordion.is-open .lesson-accordion__panel {
   transform: translateY(0);
   opacity: 1;
+}
+
+/* ===== 画面の高さが短い端末向けの調整 (例: iPhone SE対応) ===== */
+@media (max-height: 700px) and (max-width: 767px) {
+  .hero-logo {
+    /* 【iPhone SE対応】ロゴをさらに上に上げるため、bottomの値を増やす */
+    bottom: 60px;
+  }
 }
