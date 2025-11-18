@@ -12,16 +12,18 @@
 
   <body>
     <main class="page">
-      <!-- ===================================== -->
-      <!--                HERO                   -->
-      <!-- ===================================== -->
-      <section class="hero" id="top">
+      <!-- ======================= -->
+      <!-- ▼ HEROセクション       -->
+      <!-- ======================= -->
+      <section class="hero">
+        <!-- 背景は ::before でアニメーション -->
         <img
           class="hero-illust"
           src="images/hero-visual.png"
           alt="Hero Visual"
         />
 
+        <!-- ロゴ -->
         <img
           class="hero-logo"
           src="images/logo-happytimes-websolutions.png"
@@ -29,60 +31,25 @@
         />
       </section>
 
-      <!-- ===================================== -->
-      <!--      ロゴの下にフレーム画像を設置       -->
-      <!-- ===================================== -->
+      <!-- ======================= -->
+      <!-- ▼ フレーム（ABOUT）     -->
+      <!-- ======================= -->
       <section class="about-frame">
         <img
-          src="images/imagesframe-info.png"
+          src="images/frame-info.png"
           class="about-frame__image"
           alt="はっぴぃたいむIT事業部の説明フレーム"
         />
       </section>
 
-      <!-- ===================================== -->
-      <!--            2列アコーディオン           -->
-      <!-- ===================================== -->
+      <!-- ======================= -->
+      <!-- ▼ アコーディオン一覧     -->
+      <!-- ======================= -->
       <section class="lesson-wrapper">
         <div class="lesson-grid">
-          <!-- === 1行目 === -->
+          <!-- -------- 1段目（例） -------- -->
           <div class="lesson-accordion">
-            <button class="lesson-accordion__trigger" type="button">
-              <img
-                src="images/card-pc-intro.png"
-                class="lesson-accordion__card-image"
-                alt="パソコン入門 1"
-              />
-            </button>
-            <div class="lesson-accordion__body">
-              <img
-                src="images/accordion-panel-pc-intro.png"
-                class="lesson-accordion__panel"
-                alt="パソコン入門の説明 1"
-              />
-            </div>
-          </div>
-
-          <div class="lesson-accordion">
-            <button class="lesson-accordion__trigger" type="button">
-              <img
-                src="images/card-office.png"
-                class="lesson-accordion__card-image"
-                alt="office 1"
-              />
-            </button>
-            <div class="lesson-accordion__body">
-              <img
-                src="images/accordion-panel-office.png"
-                class="lesson-accordion__panel"
-                alt="office の説明 1"
-              />
-            </div>
-          </div>
-
-          <!-- === 2行目 === -->
-          <div class="lesson-accordion">
-            <button class="lesson-accordion__trigger" type="button">
+            <button class="lesson-accordion__trigger">
               <img
                 src="images/card-frontend.png"
                 class="lesson-accordion__card-image"
@@ -93,13 +60,13 @@
               <img
                 src="images/panel-frontend.png"
                 class="lesson-accordion__panel"
-                alt="フロントエンドの説明"
+                alt="フロントエンド詳細"
               />
             </div>
           </div>
 
           <div class="lesson-accordion">
-            <button class="lesson-accordion__trigger" type="button">
+            <button class="lesson-accordion__trigger">
               <img
                 src="images/card-backend.png"
                 class="lesson-accordion__card-image"
@@ -110,14 +77,14 @@
               <img
                 src="images/panel-backend.png"
                 class="lesson-accordion__panel"
-                alt="バックエンドの説明"
+                alt="バックエンド詳細"
               />
             </div>
           </div>
 
-          <!-- === 3行目 === -->
+          <!-- -------- 2段目（例） -------- -->
           <div class="lesson-accordion">
-            <button class="lesson-accordion__trigger" type="button">
+            <button class="lesson-accordion__trigger">
               <img
                 src="images/card-serverside.png"
                 class="lesson-accordion__card-image"
@@ -128,13 +95,13 @@
               <img
                 src="images/panel-serverside.png"
                 class="lesson-accordion__panel"
-                alt="サーバサイドの説明"
+                alt="サーバサイド詳細"
               />
             </div>
           </div>
 
           <div class="lesson-accordion">
-            <button class="lesson-accordion__trigger" type="button">
+            <button class="lesson-accordion__trigger">
               <img
                 src="images/card-ai.png"
                 class="lesson-accordion__card-image"
@@ -145,14 +112,14 @@
               <img
                 src="images/panel-ai.png"
                 class="lesson-accordion__panel"
-                alt="AIの説明"
+                alt="AI詳細"
               />
             </div>
           </div>
 
-          <!-- === 4行目 === -->
+          <!-- -------- 3段目（例） -------- -->
           <div class="lesson-accordion">
-            <button class="lesson-accordion__trigger" type="button">
+            <button class="lesson-accordion__trigger">
               <img
                 src="images/card-webdesign.png"
                 class="lesson-accordion__card-image"
@@ -163,13 +130,13 @@
               <img
                 src="images/panel-webdesign.png"
                 class="lesson-accordion__panel"
-                alt="WEBデザインの説明"
+                alt="WEBデザイン詳細"
               />
             </div>
           </div>
 
           <div class="lesson-accordion">
-            <button class="lesson-accordion__trigger" type="button">
+            <button class="lesson-accordion__trigger">
               <img
                 src="images/card-illustration.png"
                 class="lesson-accordion__card-image"
@@ -180,14 +147,14 @@
               <img
                 src="images/panel-illustration.png"
                 class="lesson-accordion__panel"
-                alt="イラストの説明"
+                alt="イラスト詳細"
               />
             </div>
           </div>
 
-          <!-- === 5行目 === -->
+          <!-- -------- 4段目（例） -------- -->
           <div class="lesson-accordion">
-            <button class="lesson-accordion__trigger" type="button">
+            <button class="lesson-accordion__trigger">
               <img
                 src="images/card-video.png"
                 class="lesson-accordion__card-image"
@@ -198,13 +165,13 @@
               <img
                 src="images/panel-video.png"
                 class="lesson-accordion__panel"
-                alt="動画制作の説明"
+                alt="動画制作詳細"
               />
             </div>
           </div>
 
           <div class="lesson-accordion">
-            <button class="lesson-accordion__trigger" type="button">
+            <button class="lesson-accordion__trigger">
               <img
                 src="images/card-3d.png"
                 class="lesson-accordion__card-image"
@@ -215,28 +182,24 @@
               <img
                 src="images/panel-3d.png"
                 class="lesson-accordion__panel"
-                alt="3Dの説明"
+                alt="3D詳細"
               />
             </div>
           </div>
         </div>
       </section>
-
-      <!-- ===== 追加のコンテンツエリア（必要なら残す） ===== -->
-      <section class="content">
-        <h2>テストスクロール</h2>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-      </section>
     </main>
 
-    <!-- ===== TOPへロボ ===== -->
-    <button class="top-helper" type="button" aria-label="ページ最上部へ戻る">
-      <img src="images/top-helper-robot.png" alt="TOPへ戻るロボ" />
+    <!-- ======================= -->
+    <!-- ▼ TOP へ戻るロボ         -->
+    <!-- ======================= -->
+    <button class="top-helper" id="top-helper">
+      <img src="images/top-helper-robot.png" alt="TOPへ" />
     </button>
 
+    <!-- ======================= -->
+    <!-- ▼ JS                   -->
+    <!-- ======================= -->
     <script src="main.js"></script>
   </body>
 </html>
