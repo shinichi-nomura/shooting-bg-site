@@ -118,7 +118,7 @@ body {
 
   /* 画面の高さに応じて「下からの距離」を自動調整
      → 小さい画面では 40px、大きい画面では 120px まで広がる */
-  bottom: clamp(40px, 12vh, 120px);
+  bottom: clamp(28px, 10vh, 110px);
 
   transform: translate3d(-50%, 0, 0);
   z-index: 4;
