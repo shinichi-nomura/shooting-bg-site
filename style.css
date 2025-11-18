@@ -9,9 +9,8 @@ body {
   margin: 0;
 }
 
-/* 横スクロール防止 */
 body {
-  overflow-x: hidden;
+  overflow-x: hidden; /* 横スクロール防止 */
 }
 
 .page {
@@ -21,10 +20,12 @@ body {
   background: #fff;
 }
 
-/* ===== HERO ===== */
+/* =========================
+    HERO（背景・ロゴ）
+========================= */
 .hero {
   position: relative;
-  min-height: 100dvh; /* 安定した高さ */
+  min-height: 100dvh;
 
   display: flex;
   flex-direction: column;
@@ -40,7 +41,7 @@ body {
   z-index: 2;
 }
 
-/* ===== 背景：固定レイヤー ===== */
+/* 背景アニメ */
 .hero::before {
   content: "";
   position: fixed;
@@ -61,7 +62,6 @@ body {
   transform: translateZ(0);
 }
 
-/* 背景アニメーション */
 @keyframes flow {
   from {
     background-position: 120% -120%;
@@ -82,7 +82,7 @@ body {
   }
 }
 
-/* ===== イラスト ===== */
+/* HEROイラスト */
 .hero-illust {
   position: relative;
   z-index: 2;
@@ -95,11 +95,10 @@ body {
   transform: translate(-0.05%, 10px);
 }
 
-/* ===== ロゴ ===== */
+/* ロゴ */
 .hero-logo {
   position: absolute;
   left: 50%;
-
   bottom: clamp(28px, 10vh, 110px);
 
   transform: translate3d(-50%, 0, 0);
@@ -116,11 +115,14 @@ body {
     drop-shadow(0 8px 18px rgba(0, 0, 0, 0.14));
 }
 
-/* ===== ロゴの下のフレーム ===== */
+/* =========================
+   ロゴの下のフレーム画像
+========================= */
 .about-frame {
   display: flex;
   justify-content: center;
-  margin-top: -40px; /* ロゴに近づける微調整 */
+  width: 100%;
+  margin-top: -40px;
   margin-bottom: 20px;
 }
 
@@ -128,12 +130,13 @@ body {
   width: min(92%, 760px);
   height: auto;
   display: block;
-
-  /* 見た目をはっきりさせる影（任意） */
+  margin: 0 auto; /* ★スマホの左寄り防止 */
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
 }
 
-/* ===== アコーディオン（2列） ===== */
+/* =========================
+      アコーディオン 2列
+========================= */
 .lesson-wrapper {
   position: relative;
   z-index: 3;
@@ -144,19 +147,20 @@ body {
   grid-template-columns: 1fr 1fr;
   column-gap: 14px;
   row-gap: 20px;
+
   max-width: 430px;
   padding: 16px;
   margin: 0 auto;
 }
 
-/* ===== アコーディオン本体 ===== */
+/* アコーディオン本体 */
 .lesson-accordion {
   width: 100%;
   position: relative;
   will-change: height, transform;
 }
 
-/* カード部分 */
+/* カード */
 .lesson-accordion__trigger {
   padding: 0;
   margin: 0;
@@ -172,13 +176,14 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
+
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ⭐ scaleY アニメーション */
+/* パネルアニメ（scaleY） */
 .lesson-accordion__body {
   overflow: hidden;
-  height: 0; /* JS制御 */
+  height: 0;
 }
 
 .lesson-accordion__panel {
@@ -191,6 +196,7 @@ body {
 
   opacity: 0;
   transition: transform 0.28s ease, opacity 0.28s ease;
+
   will-change: transform, opacity;
 }
 
@@ -199,7 +205,9 @@ body {
   opacity: 1;
 }
 
-/* ===== PC（768px以上） ===== */
+/* =========================
+         PC（5列）
+========================= */
 @media (min-width: 768px) {
   .hero {
     padding-top: 8dvh;
@@ -226,7 +234,7 @@ body {
     animation-duration: 160s;
   }
 
-  /* PCは5列 */
+  /* ★ PC 5列 */
   .lesson-grid {
     grid-template-columns: repeat(5, 1fr);
     max-width: 1300px;
@@ -234,6 +242,7 @@ body {
     padding: 40px 20px;
   }
 
+  /* フレームの位置補正 */
   .about-frame {
     margin-top: -60px;
     margin-bottom: 40px;
@@ -244,7 +253,9 @@ body {
   }
 }
 
-/* ===== 超縦が短い端末（iPhone SE） ===== */
+/* =========================
+      iPhone SE 調整
+========================= */
 @media (max-height: 700px) and (max-width: 767px) {
   .hero {
     padding-top: 5dvh;
@@ -261,31 +272,26 @@ body {
   }
 }
 
-/* ===== 動きを減らす設定 ===== */
+/* 動きを減らす設定 */
 @media (prefers-reduced-motion: reduce) {
   .hero::before {
     animation: none;
   }
 }
 
-/* ===== TOPへロボ ===== */
+/* TOPへロボ */
 .top-helper {
   position: fixed;
   right: 1.2rem;
   bottom: 1.5rem;
   z-index: 9999;
-
   padding: 0;
-  margin: 0;
-  border: none;
   background: none;
-  cursor: pointer;
+  border: none;
 }
 
 .top-helper img {
   width: clamp(80px, 22vw, 130px);
-  height: auto;
-  display: block;
   pointer-events: none;
 }
 

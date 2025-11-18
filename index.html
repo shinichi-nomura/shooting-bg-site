@@ -25,19 +25,19 @@
         />
       </section>
 
-      <!-- ===== 説明フレーム（画像そのまま表示） ===== -->
-      <section class="info">
+      <!-- ===== ロゴの下のフレーム画像 ===== -->
+      <section class="about-frame">
         <img
-          class="info-frame"
           src="images/frame-info.png"
-          alt="はっぴぃたいむIT事業部について"
+          class="about-frame__image"
+          alt="IT事業部案内フレーム"
         />
       </section>
 
-      <!-- ===== heroのすぐ下：2列アコーディオン ===== -->
+      <!-- ===== アコーディオン（5行 × 左右） ===== -->
       <section class="lesson-wrapper">
         <div class="lesson-grid">
-          <!-- === 1行目：左 PC入門 / 右 office === -->
+          <!-- 1行目：PC入門 / office -->
           <div class="lesson-accordion">
             <button class="lesson-accordion__trigger" type="button">
               <img
@@ -72,7 +72,7 @@
             </div>
           </div>
 
-          <!-- === 2行目：左 フロントエンド / 右 バックエンド === -->
+          <!-- 2行目：フロントエンド / バックエンド -->
           <div class="lesson-accordion">
             <button class="lesson-accordion__trigger" type="button">
               <img
@@ -107,20 +107,20 @@
             </div>
           </div>
 
-          <!-- === 3行目：左 サーバーサイド / 右 AI === -->
+          <!-- 3行目：サーバサイド / AI -->
           <div class="lesson-accordion">
             <button class="lesson-accordion__trigger" type="button">
               <img
                 src="images/card-server-side.png"
                 class="lesson-accordion__card-image"
-                alt="サーバーサイド"
+                alt="サーバサイド"
               />
             </button>
             <div class="lesson-accordion__body">
               <img
                 src="images/accordion-panel-pc-intro.png"
                 class="lesson-accordion__panel"
-                alt="サーバーサイド詳細"
+                alt="サーバサイド詳細"
               />
             </div>
           </div>
@@ -142,7 +142,7 @@
             </div>
           </div>
 
-          <!-- === 4行目：左 WEBデザイン / 右 イラスト === -->
+          <!-- 4行目：WEBデザイン / イラスト -->
           <div class="lesson-accordion">
             <button class="lesson-accordion__trigger" type="button">
               <img
@@ -177,7 +177,7 @@
             </div>
           </div>
 
-          <!-- === 5行目：左 動画制作 / 右 3D === -->
+          <!-- 5行目：動画制作 / 3D -->
           <div class="lesson-accordion">
             <button class="lesson-accordion__trigger" type="button">
               <img
@@ -213,26 +213,11 @@
           </div>
         </div>
       </section>
-
-      <!-- 下のテスト用セクション（必要なら残す/消す） -->
-      <section class="content">
-        <h2>テストスクロール</h2>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-        <p>野村っす。野村っす。野村っす。野村っす。</p>
-      </section>
     </main>
 
-    <!-- ===== 右下固定の「TOPへロボ」 ===== -->
-    <button class="top-helper" type="button" aria-label="ページ最上部へ戻る">
-      <img src="images/top-helper-robot.png" alt="TOPへ戻るロボ" />
+    <!-- TOPへロボ -->
+    <button class="top-helper" type="button">
+      <img src="images/top-helper-robot.png" alt="TOPへ戻る" />
     </button>
 
     <script src="main.js"></script>
