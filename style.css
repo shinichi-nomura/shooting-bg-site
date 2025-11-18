@@ -24,9 +24,7 @@ body {
 /* ===== HERO ===== */
 .hero {
   position: relative;
-
-  /* JS依存をやめて安定化 */
-  min-height: 100dvh;
+  min-height: 100dvh; /* 安定した高さ */
 
   display: flex;
   flex-direction: column;
@@ -84,7 +82,7 @@ body {
   }
 }
 
-/* ===== イラスト（hero-visual） ===== */
+/* ===== イラスト ===== */
 .hero-illust {
   position: relative;
   z-index: 2;
@@ -118,70 +116,24 @@ body {
     drop-shadow(0 8px 18px rgba(0, 0, 0, 0.14));
 }
 
-/* ===== コンテンツ（下部テスト） ===== */
-.content {
-  position: relative;
-  z-index: 3;
-  padding: 40px 16px 60px;
-  background: rgba(255, 255, 255, 0.85);
-}
-
-/* ========================================= */
-/* ◆ はっぴぃたいむについて（フレームセクション） */
-/* ========================================= */
-
+/* ===== ロゴの下のフレーム ===== */
 .about-frame {
-  width: 100%;
-  padding: 24px 0 40px;
   display: flex;
   justify-content: center;
-  position: relative;
-  z-index: 3;
+  margin-top: -40px; /* ロゴに近づける微調整 */
+  margin-bottom: 20px;
 }
 
-.about-frame__inner {
-  width: 92%;
-  max-width: 620px;
+.about-frame__image {
+  width: min(92%, 760px);
+  height: auto;
+  display: block;
 
-  /* フレーム画像を背景として配置 */
-  background: url("images/frame-info.png") no-repeat center top / 100% auto;
-
-  padding: 48px 20px 60px;
-  text-align: center;
-
-  margin: 0 auto;
+  /* 見た目をはっきりさせる影（任意） */
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
 }
 
-.about-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 28px;
-}
-
-.about-frame__inner p {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin: 18px 0;
-}
-
-/* PCのフレーム調整 */
-@media (min-width: 768px) {
-  .about-frame__inner {
-    max-width: 780px;
-    padding: 60px 40px 80px;
-  }
-  .about-title {
-    font-size: 1.8rem;
-    margin-bottom: 32px;
-  }
-  .about-frame__inner p {
-    font-size: 1.1rem;
-    margin: 20px 0;
-  }
-}
-
-/* ===== アコーディオン（2列：スマホ〜タブレット） ===== */
-
+/* ===== アコーディオン（2列） ===== */
 .lesson-wrapper {
   position: relative;
   z-index: 3;
@@ -204,7 +156,7 @@ body {
   will-change: height, transform;
 }
 
-/* タップ領域（カード） */
+/* カード部分 */
 .lesson-accordion__trigger {
   padding: 0;
   margin: 0;
@@ -223,16 +175,12 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ====================================== */
-/* ⭐ scaleY アコーディオンアニメーション */
-/* ====================================== */
-
+/* ⭐ scaleY アニメーション */
 .lesson-accordion__body {
   overflow: hidden;
-  height: 0; /* ※JSが height を制御 */
+  height: 0; /* JS制御 */
 }
 
-/* 中の画像が scaleY で伸びる */
 .lesson-accordion__panel {
   display: block;
   width: 100%;
@@ -242,13 +190,10 @@ body {
   transform-origin: top;
 
   opacity: 0;
-
   transition: transform 0.28s ease, opacity 0.28s ease;
-
   will-change: transform, opacity;
 }
 
-/* 開いたとき：scaleY 1 で縦に開く */
 .lesson-accordion.is-open .lesson-accordion__panel {
   transform: scaleY(1);
   opacity: 1;
@@ -288,12 +233,20 @@ body {
     gap: 24px;
     padding: 40px 20px;
   }
+
+  .about-frame {
+    margin-top: -60px;
+    margin-bottom: 40px;
+  }
+
+  .about-frame__image {
+    width: min(80%, 900px);
+  }
 }
 
-/* ===== iPhone SE 対応 ===== */
+/* ===== 超縦が短い端末（iPhone SE） ===== */
 @media (max-height: 700px) and (max-width: 767px) {
   .hero {
-    min-height: 100dvh;
     padding-top: 5dvh;
     padding-bottom: 120px;
   }
@@ -301,6 +254,10 @@ body {
   .hero-logo {
     bottom: clamp(28px, 11vh, 100px);
     width: clamp(300px, 68vw, 620px);
+  }
+
+  .about-frame {
+    margin-top: -20px;
   }
 }
 
