@@ -21,17 +21,12 @@ body {
   background: #fff;
 }
 
-/* 【ビューポート安定化】JSで設定するカスタムプロパティを定義 */
-:root {
-  --app-height: 100vh;
-}
-
 /* ===== HERO ===== */
 .hero {
   position: relative;
 
-  /* 画面に合わせて最小高さを決める（不足すれば伸びる） */
-  min-height: var(--app-height);
+  /* JS依存をやめて安定化 */
+  min-height: 100dvh;
 
   display: flex;
   flex-direction: column;
@@ -68,6 +63,7 @@ body {
   transform: translateZ(0);
 }
 
+/* 背景アニメーション */
 @keyframes flow {
   from {
     background-position: 120% -120%;
@@ -88,7 +84,7 @@ body {
   }
 }
 
-/* ===== イラスト ===== */
+/* ===== イラスト（hero-visual） ===== */
 .hero-illust {
   position: relative;
   z-index: 2;
@@ -122,7 +118,7 @@ body {
     drop-shadow(0 8px 18px rgba(0, 0, 0, 0.14));
 }
 
-/* ===== コンテンツ ===== */
+/* ===== コンテンツ（下部テスト） ===== */
 .content {
   position: relative;
   z-index: 3;
@@ -130,14 +126,13 @@ body {
   background: rgba(255, 255, 255, 0.85);
 }
 
-/* ===== アコーディオン周り ===== */
+/* ===== アコーディオン（2列：スマホ〜タブレット） ===== */
 
 .lesson-wrapper {
   position: relative;
   z-index: 3;
 }
 
-/* ▼▼▼ スマホ〜タブレットは常に2列 ▼▼▼ */
 .lesson-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -148,13 +143,14 @@ body {
   margin: 0 auto;
 }
 
-/* アコーディオン本体 */
+/* ===== アコーディオン本体 ===== */
 .lesson-accordion {
   width: 100%;
   position: relative;
   will-change: height, transform;
 }
 
+/* タップ領域（カード） */
 .lesson-accordion__trigger {
   padding: 0;
   margin: 0;
@@ -173,27 +169,34 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ▼▼▼ ここから変更：scaleY アニメ ▼▼▼ */
+/* ====================================== */
+/* ⭐ scaleY アコーディオンアニメーション */
+/* ====================================== */
 
 .lesson-accordion__body {
   overflow: hidden;
-  height: 0;
-  transition: height 0.35s ease;
+  height: 0; /* ※JSが height を制御 */
 }
 
+/* 中の画像が scaleY で伸びる */
 .lesson-accordion__panel {
   display: block;
   width: 100%;
   height: auto;
 
+  /* ★ ここを scaleY で折りたたむ */
   transform: scaleY(0);
-  transform-origin: top; /* ← 上を支点に伸び縮み */
+  transform-origin: top;
+
   opacity: 0;
 
-  transition: transform 0.35s ease, opacity 0.35s ease;
+  /* ★ GPU 適正のアニメ（軽い） */
+  transition: transform 0.28s ease, opacity 0.28s ease;
+
   will-change: transform, opacity;
 }
 
+/* 開いたとき：scaleY 1 で縦に開く */
 .lesson-accordion.is-open .lesson-accordion__panel {
   transform: scaleY(1);
   opacity: 1;
@@ -226,7 +229,7 @@ body {
     animation-duration: 160s;
   }
 
-  /* PCは5列に変更 */
+  /* PCは5列 */
   .lesson-grid {
     grid-template-columns: repeat(5, 1fr);
     max-width: 1300px;
@@ -235,7 +238,7 @@ body {
   }
 }
 
-/* ===== iPhone SE / 縦が短い端末 ===== */
+/* ===== iPhone SE 対応 ===== */
 @media (max-height: 700px) and (max-width: 767px) {
   .hero {
     min-height: 100dvh;
