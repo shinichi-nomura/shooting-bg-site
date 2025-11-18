@@ -131,30 +131,106 @@ body {
   background: rgba(255, 255, 255, 0.85);
 }
 
+/* ===== アコーディオン周り ===== */
+
+.lesson-wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+/* ▼▼▼ スマホ〜タブレットは常に2列 ▼▼▼ */
+.lesson-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ← 2列固定 */
+  column-gap: 14px;
+  row-gap: 20px;
+  max-width: 430px;
+  padding: 16px;
+  margin: 0 auto;
+}
+/* ▲▲▲ ここが正しい位置（PC版より上） ▲▲▲ */
+
+/* アコーディオン本体 */
+.lesson-accordion {
+  width: 100%;
+  position: relative;
+  will-change: height, transform;
+}
+
+.lesson-accordion__trigger {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.lesson-accordion__card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-accordion__body {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.35s ease, transform 0.35s ease;
+}
+
+.lesson-accordion__panel {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: translateZ(0) translateY(-20px);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  will-change: transform, opacity;
+}
+
+.lesson-accordion.is-open .lesson-accordion__panel {
+  transform: translateZ(0) translateY(0);
+  opacity: 1;
+}
+
 /* ===== PC（768px以上） ===== */
 @media (min-width: 768px) {
   .hero {
-    padding-top: 10dvh;
+    padding-top: 8dvh;
     min-height: 100dvh;
-    padding-bottom: clamp(120px, 20vh, 200px);
+    padding-bottom: clamp(120px, 18vh, 210px);
   }
 
   .hero-illust {
-    width: 100.1%;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 78vh;
     object-fit: cover;
-    transform: translate(-0.05%, 15px);
+    object-position: center top;
+    transform: translate(0, 0);
   }
 
   .hero-logo {
-    bottom: clamp(40px, 12vh, 110px);
-    width: clamp(440px, 48vw, 900px);
+    bottom: clamp(60px, 12vh, 140px);
+    width: clamp(560px, 48vw, 1000px);
   }
 
   .hero::before {
     background-size: 420px auto;
     animation-duration: 160s;
   }
+
+  /* ▼▼▼ PCは5列に変更 ▼▼▼ */
+  .lesson-grid {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1300px;
+    gap: 24px;
+    padding: 40px 20px;
+  }
+  /* ▲▲▲ PCで上書きされるので5列になる ▲▲▲ */
 }
 
 /* ===== iPhone SE / 縦が短い端末 ===== */
@@ -201,70 +277,4 @@ body {
 
 .top-helper:active {
   transform: translateY(3px) scale(0.97);
-}
-
-/* ===== アコーディオン周り ===== */
-
-.lesson-wrapper {
-  position: relative;
-  z-index: 3;
-}
-
-/* ★★★ 常に2列固定（POCO F7 / iPhone SE対応） ★★★ */
-.lesson-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* ← ここが2列の決め手 */
-  column-gap: 14px;
-  row-gap: 20px;
-  max-width: 430px;
-  padding: 16px;
-  margin: 0 auto;
-}
-
-/* （1列化ルールはすべて削除） */
-
-/* アコーディオン本体 */
-.lesson-accordion {
-  width: 100%;
-  position: relative;
-  will-change: height, transform;
-}
-
-.lesson-accordion__trigger {
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-  display: block;
-  width: 100%;
-}
-
-.lesson-accordion__card-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.lesson-accordion__body {
-  overflow: hidden;
-  height: 0;
-  transition: height 0.35s ease, transform 0.35s ease;
-}
-
-.lesson-accordion__panel {
-  display: block;
-  width: 100%;
-  height: auto;
-  transform: translateZ(0) translateY(-20px);
-  opacity: 0;
-  transition: transform 0.35s ease, opacity 0.35s ease;
-  will-change: transform, opacity;
-}
-
-.lesson-accordion.is-open .lesson-accordion__panel {
-  transform: translateZ(0) translateY(0);
-  opacity: 1;
 }
