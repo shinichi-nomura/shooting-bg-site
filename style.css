@@ -26,11 +26,11 @@ body {
   --app-height: 100vh;
 }
 
-/* ===== HERO（モバイル＝375×812 基準） ===== */
+/* ===== HERO ===== */
 .hero {
   position: relative;
 
-  /* 端末の高さを「最低値」として使う（足りなければ伸びる） */
+  /* 画面に合わせて最小高さを決める（不足すれば伸びる） */
   min-height: var(--app-height);
 
   display: flex;
@@ -41,10 +41,7 @@ body {
   text-align: center;
   overflow: hidden;
 
-  /* 上側の余白（アドレスバー分の逃げ） */
   padding-top: 7svh;
-
-  /* 下側にロゴが入るための余白を必ず確保しておく */
   padding-bottom: clamp(96px, 18vh, 160px);
 
   z-index: 2;
@@ -68,11 +65,9 @@ body {
   pointer-events: none;
   z-index: 0;
 
-  /* 【カクツキ対策】固定背景をGPU処理に強制 */
   transform: translateZ(0);
 }
 
-/* アニメーション（右上 → 左下） */
 @keyframes flow {
   from {
     background-position: 120% -120%;
@@ -82,7 +77,6 @@ body {
   }
 }
 
-/* スマホ幅で流れ方変更 */
 @media (max-width: 768px) {
   @keyframes flow {
     from {
@@ -100,14 +94,10 @@ body {
   z-index: 2;
   pointer-events: none;
 
-  /* 幅いっぱいに広げる */
   width: 100.1%;
-
-  /* ヒーローの高さに追従させる（cover でトリミング） */
   height: 100%;
   object-fit: cover;
 
-  /* 微妙な横ズレの補正 */
   transform: translate(-0.05%, 10px);
 }
 
@@ -116,27 +106,24 @@ body {
   position: absolute;
   left: 50%;
 
-  /* 画面の高さに応じて「下からの距離」を自動調整
-     → 小さい画面では 40px、大きい画面では 120px まで広がる */
+  /* ★ 少し下に落とした（F7・SE対応） */
   bottom: clamp(28px, 10vh, 110px);
 
   transform: translate3d(-50%, 0, 0);
   z-index: 4;
 
-  /* 画面幅に応じてロゴのサイズを自動調整 */
   width: clamp(320px, 70vw, 780px);
   height: auto;
 
   will-change: transform, opacity;
   backface-visibility: hidden;
-
   pointer-events: none;
 
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18))
     drop-shadow(0 8px 18px rgba(0, 0, 0, 0.14));
 }
 
-/* ===== コンテンツ（テスト用） ===== */
+/* ===== コンテンツ ===== */
 .content {
   position: relative;
   z-index: 3;
@@ -148,8 +135,6 @@ body {
 @media (min-width: 768px) {
   .hero {
     padding-top: 10dvh;
-
-    /* PCでは画面高さをもう少ししっかり確保 */
     min-height: 100dvh;
     padding-bottom: clamp(120px, 20vh, 200px);
   }
@@ -162,8 +147,7 @@ body {
   }
 
   .hero-logo {
-    /* PCではやや大きめ＆下からの距離も広め */
-    bottom: clamp(60px, 14vh, 140px);
+    bottom: clamp(40px, 12vh, 110px);
     width: clamp(440px, 48vw, 900px);
   }
 
@@ -173,35 +157,31 @@ body {
   }
 }
 
-/* ===== 画面の高さがかなり短い端末向けの調整 ===== */
-/* 例：iPhone SE など、縦が 640〜700px あたりの端末 */
+/* ===== iPhone SE / 縦が短い端末 ===== */
 @media (max-height: 700px) and (max-width: 767px) {
   .hero {
-    /* 「全画面ピッタリ」だと詰まりすぎるので、少し余裕を持たせる */
     min-height: 100dvh;
     padding-top: 5dvh;
     padding-bottom: 120px;
   }
 
   .hero-logo {
-    /* 少し上に逃がしつつ、幅も少し抑える */
-    bottom: clamp(56px, 15vh, 120px);
+    bottom: clamp(28px, 11vh, 100px);
     width: clamp(300px, 68vw, 620px);
   }
 }
 
-/* ===== 動きを減らす設定の人用 ===== */
+/* ===== 動きを減らす設定 ===== */
 @media (prefers-reduced-motion: reduce) {
   .hero::before {
     animation: none;
   }
 }
 
-/* ===== TOPへロボ（右下固定）===== */
+/* ===== TOPへロボ ===== */
 .top-helper {
   position: fixed;
   right: 1.2rem;
-  left: auto;
   bottom: 1.5rem;
   z-index: 9999;
 
@@ -223,17 +203,17 @@ body {
   transform: translateY(3px) scale(0.97);
 }
 
-/* ===== heroの下のアコーディオン周り ===== */
+/* ===== アコーディオン周り ===== */
 
 .lesson-wrapper {
   position: relative;
   z-index: 3;
 }
 
-/* 2列レイアウト */
+/* ★★★ 常に2列固定（POCO F7 / iPhone SE対応） ★★★ */
 .lesson-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* ← ここが2列の決め手 */
   column-gap: 14px;
   row-gap: 20px;
   max-width: 430px;
@@ -241,12 +221,7 @@ body {
   margin: 0 auto;
 }
 
-/* 画面が狭いときは1列に落とす */
-@media (max-width: 400px) {
-  .lesson-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* （1列化ルールはすべて削除） */
 
 /* アコーディオン本体 */
 .lesson-accordion {
@@ -255,7 +230,6 @@ body {
   will-change: height, transform;
 }
 
-/* カード部分（タップ領域） */
 .lesson-accordion__trigger {
   padding: 0;
   margin: 0;
@@ -274,7 +248,6 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* アコーディオン中身（板＋ロボ画像） */
 .lesson-accordion__body {
   overflow: hidden;
   height: 0;
@@ -291,7 +264,6 @@ body {
   will-change: transform, opacity;
 }
 
-/* 開いた状態（is-openクラスがJSで付く） */
 .lesson-accordion.is-open .lesson-accordion__panel {
   transform: translateZ(0) translateY(0);
   opacity: 1;
