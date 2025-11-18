@@ -30,8 +30,8 @@ body {
 .hero {
   position: relative;
 
-  /* 【ビューポート安定化】JSで取得した安定した高さを適用 */
-  height: var(--app-height); 
+  /* 端末の高さを「最低値」として使う（足りなければ伸びる） */
+  min-height: var(--app-height);
 
   display: flex;
   flex-direction: column;
@@ -41,7 +41,11 @@ body {
   text-align: center;
   overflow: hidden;
 
-  padding-top: 7dvh;
+  /* 上側の余白（アドレスバー分の逃げ） */
+  padding-top: 7svh;
+
+  /* 下側にロゴが入るための余白を必ず確保しておく */
+  padding-bottom: clamp(96px, 18vh, 160px);
 
   z-index: 2;
 }
@@ -96,15 +100,14 @@ body {
   z-index: 2;
   pointer-events: none;
 
-  /* 【横の隙間解消】幅をわずかに広げる */
+  /* 幅いっぱいに広げる */
   width: 100.1%;
-  height: auto;
 
+  /* ヒーローの高さに追従させる（cover でトリミング） */
+  height: 100%;
   object-fit: cover;
-  
-  max-height: 70svh;
 
-  /* 【横の隙間解消】中央寄せのための微調整 */
+  /* 微妙な横ズレの補正 */
   transform: translate(-0.05%, 10px);
 }
 
@@ -113,20 +116,20 @@ body {
   position: absolute;
   left: 50%;
 
-  /* 【★レスポンシブ修正】モバイル基準値を120pxに下げる */
-  bottom: 120px; 
+  /* 画面の高さに応じて「下からの距離」を自動調整
+     → 小さい画面では 40px、大きい画面では 120px まで広がる */
+  bottom: clamp(40px, 12vh, 120px);
 
-  /* 【カクツキ対策】translate3dを維持 */
   transform: translate3d(-50%, 0, 0);
   z-index: 4;
 
-  width: clamp(360px, 70vw, 780px);
+  /* 画面幅に応じてロゴのサイズを自動調整 */
+  width: clamp(320px, 70vw, 780px);
   height: auto;
-  
-  /* 【カクツキ対策】描画最適化を強制 */
+
   will-change: transform, opacity;
   backface-visibility: hidden;
-  
+
   pointer-events: none;
 
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18))
@@ -145,26 +148,45 @@ body {
 @media (min-width: 768px) {
   .hero {
     padding-top: 10dvh;
+
+    /* PCでは画面高さをもう少ししっかり確保 */
+    min-height: 100dvh;
+    padding-bottom: clamp(120px, 20vh, 200px);
   }
 
   .hero-illust {
     width: 100.1%;
-    max-height: 80vh;
-    object-fit: contain;
-
+    height: 100%;
+    object-fit: cover;
     transform: translate(-0.05%, 15px);
   }
 
   .hero-logo {
-    /* 【★レスポンシブ修正】PC版も120pxに下げる */
-    bottom: 120px;
-    transform: translate3d(-50%, 0, 0);
+    /* PCではやや大きめ＆下からの距離も広め */
+    bottom: clamp(60px, 14vh, 140px);
     width: clamp(440px, 48vw, 900px);
   }
 
   .hero::before {
     background-size: 420px auto;
     animation-duration: 160s;
+  }
+}
+
+/* ===== 画面の高さがかなり短い端末向けの調整 ===== */
+/* 例：iPhone SE など、縦が 640〜700px あたりの端末 */
+@media (max-height: 700px) and (max-width: 767px) {
+  .hero {
+    /* 「全画面ピッタリ」だと詰まりすぎるので、少し余裕を持たせる */
+    min-height: 100dvh;
+    padding-top: 5dvh;
+    padding-bottom: 120px;
+  }
+
+  .hero-logo {
+    /* 少し上に逃がしつつ、幅も少し抑える */
+    bottom: clamp(56px, 15vh, 120px);
+    width: clamp(300px, 68vw, 620px);
   }
 }
 
@@ -219,8 +241,8 @@ body {
   margin: 0 auto;
 }
 
-/* 画面がかなり狭いときは1列に落とす（お好みで） */
-@media (max-width: 360px) {
+/* 画面が狭いときは1列に落とす */
+@media (max-width: 400px) {
   .lesson-grid {
     grid-template-columns: 1fr;
   }
@@ -230,8 +252,7 @@ body {
 .lesson-accordion {
   width: 100%;
   position: relative;
-  /* 【カクツキ対策】描画最適化を強制 */
-  will-change: height, transform; 
+  will-change: height, transform;
 }
 
 /* カード部分（タップ領域） */
@@ -256,7 +277,7 @@ body {
 /* アコーディオン中身（板＋ロボ画像） */
 .lesson-accordion__body {
   overflow: hidden;
-  height: 0; 
+  height: 0;
   transition: height 0.35s ease, transform 0.35s ease;
 }
 
@@ -264,10 +285,9 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  transform: translateZ(0) translateY(-20px); 
+  transform: translateZ(0) translateY(-20px);
   opacity: 0;
   transition: transform 0.35s ease, opacity 0.35s ease;
-  /* 【カクツキ対策】描画最適化を強制 */
   will-change: transform, opacity;
 }
 
@@ -275,12 +295,4 @@ body {
 .lesson-accordion.is-open .lesson-accordion__panel {
   transform: translateZ(0) translateY(0);
   opacity: 1;
-}
-
-/* ===== 画面の高さが短い端末向けの調整 (iPhone SE対応) ===== */
-@media (max-height: 700px) and (max-width: 767px) {
-  .hero-logo {
-    /* 【★レスポンシブ修正】SEサイズも170pxに下げる */
-    bottom: 170px; 
-  }
 }
