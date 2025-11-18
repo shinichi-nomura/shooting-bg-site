@@ -126,6 +126,60 @@ body {
   background: rgba(255, 255, 255, 0.85);
 }
 
+/* ========================================= */
+/* ◆ はっぴぃたいむについて（フレームセクション） */
+/* ========================================= */
+
+.about-frame {
+  width: 100%;
+  padding: 24px 0 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.about-frame__inner {
+  width: 92%;
+  max-width: 620px;
+
+  /* フレーム画像を背景として配置 */
+  background: url("images/frame-info.png") no-repeat center top / 100% auto;
+
+  padding: 48px 20px 60px;
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.about-frame__inner p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 18px 0;
+}
+
+/* PCのフレーム調整 */
+@media (min-width: 768px) {
+  .about-frame__inner {
+    max-width: 780px;
+    padding: 60px 40px 80px;
+  }
+  .about-title {
+    font-size: 1.8rem;
+    margin-bottom: 32px;
+  }
+  .about-frame__inner p {
+    font-size: 1.1rem;
+    margin: 20px 0;
+  }
+}
+
 /* ===== アコーディオン（2列：スマホ〜タブレット） ===== */
 
 .lesson-wrapper {
@@ -184,13 +238,11 @@ body {
   width: 100%;
   height: auto;
 
-  /* ★ ここを scaleY で折りたたむ */
   transform: scaleY(0);
   transform-origin: top;
 
   opacity: 0;
 
-  /* ★ GPU 適正のアニメ（軽い） */
   transition: transform 0.28s ease, opacity 0.28s ease;
 
   will-change: transform, opacity;

@@ -1,4 +1,15 @@
+/* 【ビューポート安定化】ブラウザの安定した高さを取得し、CSS変数にセットする関数 */
+/* ※今のCSSでは --app-height を使っていませんが、将来用に残しています */
+const setAppHeight = () => {
+  const doc = document.documentElement;
+  doc.style.setProperty("--app-height", `${window.innerHeight}px`);
+};
+
 document.addEventListener("DOMContentLoaded", () => {
+  /* ページロード時とリサイズ時に呼び出し（必要なければ削除してもOK） */
+  setAppHeight();
+  window.addEventListener("resize", setAppHeight);
+
   /* ===== TOPへロボ：ページ最上部へスクロール ===== */
   const topHelperBtn = document.querySelector(".top-helper");
 
@@ -28,12 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const isOpen = accordion.classList.contains("is-open");
 
       if (isOpen) {
+        // すでに開いている自分を閉じるだけ
         accordion.classList.remove("is-open");
         body.style.height = "0px";
       } else {
-        // 他を閉じる
+        // まず「他のアコーディオン」を全部閉じる
         accordions.forEach((other) => {
-          if (other === accordion) return;
+          if (other === accordion) return; // 自分はスキップ
 
           const otherBody = other.querySelector(".lesson-accordion__body");
           if (!otherBody) return;
@@ -42,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
           otherBody.style.height = "0px";
         });
 
+        // 自分だけ開く（パネル画像の高さを取得）
         const panelHeight = panel.offsetHeight;
         accordion.classList.add("is-open");
         body.style.height = panelHeight + "px";
