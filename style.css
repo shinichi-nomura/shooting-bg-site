@@ -225,6 +225,39 @@ body {
 }
 
 /* =========================
+   お問い合わせボタン
+========================= */
+.contact-button-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: clamp(30px, 6vh, 50px) 0;
+  margin: 0 auto;
+}
+
+.contact-button {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-button img {
+  width: clamp(280px, 70vw, 450px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.15));
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.contact-button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* =========================
       アコーディオン 2列
 ========================= */
 .lesson-wrapper {
