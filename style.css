@@ -448,6 +448,24 @@ body {
   }
 }
 
+/* =========================
+   1日の流れ
+========================= */
+.flow-daily-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: clamp(40px, 8vh, 80px) 0;
+  margin: 0 auto;
+}
+
+.flow-daily-image {
+  width: clamp(280px, 70vw, 450px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+}
+
 /* TOPへロボ */
 .top-helper {
   position: fixed;
