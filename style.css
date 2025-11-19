@@ -218,7 +218,6 @@ body {
   bottom: 3%;
   width: clamp(50px, 12%, 70px);
   aspect-ratio: 1;
-  background-image: url("images/top-helper-robot.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
