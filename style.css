@@ -159,8 +159,8 @@ body {
 }
 
 .about-frame__intro {
-  font-size: clamp(12px, 3vw, 15px);
-  color: #333;
+  font-size: clamp(15px, 4vw, 18px);
+  color: #111;
   margin: 0 0 5%;
   line-height: 1.8;
 }
@@ -242,7 +242,7 @@ body {
 }
 
 .contact-button img {
-  width: clamp(280px, 70vw, 450px);
+  width: clamp(350px, 80vw, 550px);
   height: auto;
   display: block;
   filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.15));
