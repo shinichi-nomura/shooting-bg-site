@@ -116,7 +116,7 @@ body {
 }
 
 /* =========================
-   ロゴの下のフレーム画像
+   ロゴの下のフレーム（テキスト版）
 ========================= */
 .about-frame {
   display: flex;
@@ -126,12 +126,73 @@ body {
   margin-bottom: 20px;
 }
 
-.about-frame__image {
+.about-frame__container {
+  position: relative;
   width: min(92%, 760px);
-  height: auto;
-  display: block;
-  margin: 0 auto; /* ★スマホの左寄り防止 */
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
+  background: #fff;
+  border: 3px solid #87CEEB;
+  border-radius: 20px;
+  padding: 40px 30px 50px;
+  margin: 0 auto;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.about-frame__title {
+  font-size: clamp(20px, 5vw, 28px);
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 30px;
+  line-height: 1.5;
+}
+
+.about-frame__intro {
+  font-size: clamp(14px, 3.5vw, 16px);
+  color: #333;
+  margin: 0 0 25px;
+  line-height: 1.8;
+}
+
+.about-frame__mission {
+  font-size: clamp(14px, 3.5vw, 16px);
+  color: #333;
+  margin: 0 0 30px;
+  line-height: 1.8;
+}
+
+.about-frame__value {
+  font-size: clamp(13px, 3.2vw, 15px);
+  color: #333;
+  margin: 0 0 20px;
+  line-height: 1.8;
+}
+
+.about-frame__concept {
+  font-size: clamp(14px, 3.5vw, 16px);
+  color: #333;
+  margin: 30px 0 25px;
+  line-height: 1.8;
+}
+
+.about-frame__message {
+  font-size: clamp(13px, 3.2vw, 15px);
+  color: #333;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.about-frame__container::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 60px;
+  height: 60px;
+  background-image: url("images/top-helper-robot.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
 }
 
 /* =========================
@@ -248,8 +309,31 @@ body {
     margin-bottom: 40px;
   }
 
-  .about-frame__image {
+  .about-frame__container {
     width: min(80%, 900px);
+    padding: 50px 60px 60px;
+  }
+
+  .about-frame__title {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .about-frame__intro,
+  .about-frame__mission,
+  .about-frame__concept {
+    font-size: 16px;
+  }
+
+  .about-frame__value {
+    font-size: 15px;
+  }
+
+  .about-frame__container::after {
+    width: 80px;
+    height: 80px;
+    right: 20px;
+    bottom: 20px;
   }
 }
 
