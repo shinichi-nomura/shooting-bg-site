@@ -179,6 +179,18 @@ body {
   line-height: 1.8;
 }
 
+.about-frame__value--left {
+  text-align: left;
+}
+
+.about-frame__value--right {
+  text-align: right;
+}
+
+.about-frame__value--center {
+  text-align: center;
+}
+
 .about-frame__concept {
   font-size: clamp(12px, 3vw, 15px);
   color: #333;
