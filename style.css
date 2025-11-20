@@ -542,6 +542,46 @@ body {
   filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
 }
 
+/* =========================
+   相談・申し込み 画像
+========================= */
+.flow-consult-apply-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 clamp(40px, 8vh, 80px);
+  margin: 0 auto;
+}
+
+.flow-consult-apply-image {
+  width: clamp(350px, 80vw, 550px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+}
+
+/* =========================
+   利用開始 画像
+========================= */
+.flow-start-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 clamp(40px, 8vh, 80px);
+  margin: 0 auto;
+}
+
+.flow-start-image {
+  width: clamp(350px, 80vw, 550px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+}
+
 /* TOPへロボ */
 .top-helper {
   position: fixed;
