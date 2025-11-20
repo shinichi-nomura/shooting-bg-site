@@ -604,6 +604,48 @@ body {
   filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
 }
 
+/* =========================
+   クリエイティブチーム 画像
+========================= */
+.team-creative-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 clamp(40px, 8vh, 80px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team-creative-image {
+  width: clamp(350px, 80vw, 550px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+}
+
+/* =========================
+   オフィスチーム 画像
+========================= */
+.team-office-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 clamp(40px, 8vh, 80px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team-office-image {
+  width: clamp(350px, 80vw, 550px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+}
+
 /* TOPへロボ */
 .top-helper {
   position: fixed;
