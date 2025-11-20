@@ -530,13 +530,13 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: clamp(10px, 2vh, 20px) 0;
+  padding: clamp(20px, 4vh, 40px) 0;
   margin: 0 auto;
   text-align: center;
 }
 
 .flow-arrow-image {
-  width: clamp(40px, 10vw, 80px);
+  width: clamp(60px, 15vw, 120px);
   height: auto;
   display: block;
   margin: 0 auto;
