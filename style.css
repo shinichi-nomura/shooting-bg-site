@@ -694,15 +694,16 @@ body {
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
+  display: flex;
+  justify-content: center;
 }
 
 .contact-form-title {
   font-size: clamp(20px, 5vw, 28px);
   font-weight: bold;
   color: #333;
-  margin: 0;
+  margin: 0 auto;
   line-height: 1.5;
-  text-align: center;
 }
 
 /* =========================
@@ -715,6 +716,7 @@ body {
   width: 100%;
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
+  text-align: center;
 }
 
 .contact-form-image {
@@ -722,8 +724,7 @@ body {
   max-width: clamp(350px, 80vw, 550px);
   height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
 }
 
