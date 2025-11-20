@@ -748,6 +748,26 @@ body {
   margin: 0 auto;
 }
 
+/* =========================
+   お待ちしています 画像
+========================= */
+.contact-thanks-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 clamp(60px, 12vh, 120px);
+  margin: 0 auto;
+}
+
+.contact-thanks-image {
+  width: 100%;
+  max-width: clamp(350px, 80vw, 550px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* TOPへロボ */
 .top-helper {
   position: fixed;
