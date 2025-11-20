@@ -518,6 +518,24 @@ body {
   filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
 }
 
+/* =========================
+   見学・体験 画像
+========================= */
+.flow-visit-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 0 clamp(40px, 8vh, 80px);
+  margin: 0 auto;
+}
+
+.flow-visit-image {
+  width: clamp(350px, 80vw, 550px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+}
+
 /* TOPへロボ */
 .top-helper {
   position: fixed;
