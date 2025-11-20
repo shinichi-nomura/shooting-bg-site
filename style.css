@@ -483,6 +483,41 @@ body {
   filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
 }
 
+/* =========================
+   ご利用の流れ タイトル
+========================= */
+.flow-usage-title-section {
+  width: 100%;
+  text-align: center;
+  padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
+}
+
+.flow-usage-title {
+  font-size: clamp(20px, 5vw, 28px);
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* =========================
+   ご利用の流れ 画像
+========================= */
+.flow-contact-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 0 clamp(40px, 8vh, 80px);
+  margin: 0 auto;
+}
+
+.flow-contact-image {
+  width: clamp(350px, 80vw, 550px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+}
+
 /* TOPへロボ */
 .top-helper {
   position: fixed;
