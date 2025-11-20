@@ -617,7 +617,8 @@ body {
 }
 
 .team-creative-image {
-  width: clamp(350px, 80vw, 550px);
+  width: 100%;
+  max-width: clamp(350px, 80vw, 550px);
   height: auto;
   display: block;
   margin-left: auto;
@@ -638,7 +639,8 @@ body {
 }
 
 .team-office-image {
-  width: clamp(350px, 80vw, 550px);
+  width: 100%;
+  max-width: clamp(350px, 80vw, 550px);
   height: auto;
   display: block;
   margin-left: auto;
