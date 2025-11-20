@@ -510,7 +510,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0 0 clamp(40px, 8vh, 80px);
+  padding: 0 0 clamp(20px, 4vh, 40px);
   margin: 0 auto;
 }
 
@@ -523,6 +523,25 @@ body {
 }
 
 /* =========================
+   矢印 画像
+========================= */
+.flow-arrow-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: clamp(10px, 2vh, 20px) 0;
+  margin: 0 auto;
+}
+
+.flow-arrow-image {
+  width: clamp(40px, 10vw, 80px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* =========================
    見学・体験 画像
 ========================= */
 .flow-visit-section {
@@ -530,7 +549,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0 0 clamp(40px, 8vh, 80px);
+  padding: 0 0 clamp(20px, 4vh, 40px);
   margin: 0 auto;
 }
 
@@ -550,7 +569,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0 0 clamp(40px, 8vh, 80px);
+  padding: 0 0 clamp(20px, 4vh, 40px);
   margin: 0 auto;
 }
 
