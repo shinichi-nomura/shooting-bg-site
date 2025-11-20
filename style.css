@@ -745,7 +745,8 @@ body {
   max-width: clamp(350px, 80vw, 550px);
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =========================
@@ -765,7 +766,8 @@ body {
   max-width: clamp(350px, 80vw, 550px);
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* TOPへロボ */
