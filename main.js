@@ -6,10 +6,23 @@ const setAppHeight = () => {
   doc.style.setProperty("--app-height", `${window.innerHeight}px`);
 };
 
+/* デバウンス関数 */
+const debounce = (func, wait) => {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   /* 初期設定 */
   setAppHeight();
-  window.addEventListener("resize", setAppHeight);
+  window.addEventListener("resize", debounce(setAppHeight, 150));
 
   /* ================================
        TOPへロボ（スムーススクロール）
@@ -59,12 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
           otherBody.style.height = "0px";
         });
 
-        /* 開く前にパネルの高さを取得 */
-        const panelHeight = panel.offsetHeight;
+        /* レイアウトスラッシング回避: 読み取り→書き込みを分離 */
+        requestAnimationFrame(() => {
+          const panelHeight = panel.offsetHeight;
 
-        /* 開く */
-        accordion.classList.add("is-open");
-        body.style.height = panelHeight + "px";
+          requestAnimationFrame(() => {
+            accordion.classList.add("is-open");
+            body.style.height = panelHeight + "px";
+          });
+        });
       }
     });
   });
