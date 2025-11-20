@@ -611,16 +611,15 @@ body {
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
-  display: flex;
-  justify-content: center;
 }
 
 .user-voice-title {
   font-size: clamp(20px, 5vw, 28px);
   font-weight: bold;
   color: #333;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* =========================
