@@ -676,14 +676,15 @@ body {
   width: 100%;
   padding: 0 0 clamp(30px, 6vh, 60px);
   margin: 0 auto;
-  text-align: center;
 }
 
 .contact-title-image {
-  width: clamp(300px, 70vw, 500px);
+  width: 100%;
+  max-width: clamp(300px, 70vw, 500px);
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* TOPへロボ */
