@@ -64,6 +64,8 @@ body {
   z-index: 0;
 
   transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 @keyframes flow {
@@ -139,7 +141,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   aspect-ratio: 512 / 870;
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .about-frame__content {
@@ -249,7 +251,8 @@ body {
   width: clamp(350px, 80vw, 550px);
   height: auto;
   display: block;
-  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.15));
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .contact-button:hover {
@@ -301,7 +304,6 @@ body {
 .lesson-accordion {
   width: 100%;
   position: relative;
-  will-change: height, transform;
 }
 
 /* カード */
@@ -484,7 +486,8 @@ body {
   width: clamp(350px, 80vw, 550px);
   height: auto;
   display: block;
-  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* =========================
@@ -523,7 +526,8 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* =========================
@@ -563,7 +567,8 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* =========================
@@ -584,7 +589,8 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* =========================
@@ -605,7 +611,8 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* =========================
@@ -645,7 +652,8 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* =========================
@@ -667,7 +675,8 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* =========================
@@ -733,7 +742,8 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .contact-form-overlay {
