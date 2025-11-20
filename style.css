@@ -728,6 +728,26 @@ body {
   filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
 }
 
+/* =========================
+   お電話でのお問い合わせ 画像
+========================= */
+.contact-phone-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 clamp(40px, 8vh, 80px);
+  margin: 0 auto;
+}
+
+.contact-phone-image {
+  width: 100%;
+  max-width: clamp(350px, 80vw, 550px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* TOPへロボ */
 .top-helper {
   position: fixed;
