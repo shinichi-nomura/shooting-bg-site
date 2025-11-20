@@ -666,6 +666,27 @@ body {
   filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.12));
 }
 
+/* =========================
+   お問い合わせタイトル 画像
+========================= */
+.contact-title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 clamp(30px, 6vh, 60px);
+  margin: 0 auto;
+}
+
+.contact-title-image {
+  width: 100%;
+  max-width: clamp(300px, 70vw, 500px);
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* TOPへロボ */
 .top-helper {
   position: fixed;
