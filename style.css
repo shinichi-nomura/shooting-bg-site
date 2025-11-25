@@ -734,7 +734,7 @@ body {
 .contact-form-wrapper {
   position: relative;
   width: 100%;
-  max-width: clamp(350px, 70vw, 480px);
+  max-width: clamp(350px, 80vw, 600px);
   max-height: 600px;
   margin: 0 auto;
 }
