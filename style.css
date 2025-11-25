@@ -844,7 +844,7 @@ body {
 }
 
 .contact-submit-btn img {
-  width: clamp(150px, 35vw, 200px);
+  width: clamp(240px, 60vw, 300px);
   height: auto;
   display: block;
 }
