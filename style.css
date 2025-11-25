@@ -735,12 +735,15 @@ body {
   position: relative;
   width: 100%;
   max-width: clamp(320px, 85vw, 600px);
+  max-height: 600px;
   margin: 0 auto;
 }
 
 .contact-form-bg {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-height: 600px;
+  object-fit: contain;
   display: block;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -840,7 +843,7 @@ body {
 }
 
 .contact-submit-btn img {
-  width: clamp(120px, 30vw, 180px);
+  width: clamp(180px, 45vw, 260px);
   height: auto;
   display: block;
 }
