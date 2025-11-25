@@ -938,7 +938,7 @@ body {
 
 @media (max-width: 768px) {
   .contact-form-overlay {
-    left: 12%;
-    right: 12%;
+    left: 16%;
+    right: 16%;
   }
 }
