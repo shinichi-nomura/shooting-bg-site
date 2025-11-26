@@ -755,7 +755,7 @@ body {
   top: 8%;
   left: 10%;
   right: 10%;
-  bottom: 8%;
+  bottom: 30%;
   display: flex;
   flex-direction: column;
   gap: clamp(6px, 1.2vw, 8px);
@@ -860,15 +860,17 @@ body {
 }
 
 /* =========================
-   お電話でのお問い合わせ 画像
+   お電話でのお問い合わせ（フレーム内）
 ========================= */
-.contact-phone-section {
+.contact-phone-inside {
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 0 0 clamp(40px, 8vh, 80px);
-  margin: 0 auto;
+  z-index: 10;
 }
 
 .contact-phone-link {
@@ -876,6 +878,7 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
   text-decoration: none;
+  width: 100%;
 }
 
 .contact-phone-link:hover {
@@ -889,32 +892,28 @@ body {
 
 .contact-phone-image {
   width: 100%;
-  max-width: clamp(350px, 80vw, 550px);
   height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* =========================
-   お待ちしています 画像
+   お待ちしています（フレーム内）
 ========================= */
-.contact-thanks-section {
+.contact-thanks-inside {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 0 0 clamp(60px, 12vh, 120px);
-  margin: 0 auto;
+  z-index: 10;
 }
 
 .contact-thanks-image {
   width: 100%;
-  max-width: clamp(350px, 80vw, 550px);
   height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* TOPへロボ */
