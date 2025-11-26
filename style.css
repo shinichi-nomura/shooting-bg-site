@@ -903,7 +903,7 @@ body {
 ========================= */
 .contact-thanks-inside {
   position: absolute;
-  bottom: 18%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
