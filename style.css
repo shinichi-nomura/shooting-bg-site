@@ -878,7 +878,6 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
   text-decoration: none;
-  width: 100%;
 }
 
 .contact-phone-link:hover {
@@ -891,9 +890,11 @@ body {
 }
 
 .contact-phone-image {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 /* =========================
@@ -911,9 +912,11 @@ body {
 }
 
 .contact-thanks-image {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 /* TOPへロボ */
