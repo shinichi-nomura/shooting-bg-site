@@ -865,7 +865,7 @@ body {
 ========================= */
 .contact-phone-inside {
   position: absolute;
-  bottom: 35%;
+  bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
