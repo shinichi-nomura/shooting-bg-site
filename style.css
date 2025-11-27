@@ -863,6 +863,8 @@ body {
    お電話でのお問い合わせ 画像
 ========================= */
 .contact-phone-section {
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
