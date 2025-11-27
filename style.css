@@ -758,7 +758,7 @@ body {
   bottom: 5%;
   display: flex;
   flex-direction: column;
-  gap: clamp(7px, 1.4vw, 10px);
+  gap: clamp(5px, 1.2vw, 8px);
   padding: 0;
   overflow: hidden;
 }
@@ -766,7 +766,7 @@ body {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
 .form-group label {
