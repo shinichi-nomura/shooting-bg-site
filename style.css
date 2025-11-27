@@ -770,7 +770,7 @@ body {
 }
 
 .form-group label {
-  font-size: clamp(12px, 2.8vw, 15px);
+  font-size: clamp(13px, 3vw, 16px);
   font-weight: bold;
   color: #333;
   margin: 0;
@@ -780,10 +780,10 @@ body {
 .form-group input[type="tel"],
 .form-group input[type="email"] {
   width: 100%;
-  padding: clamp(8px, 2vw, 12px);
+  padding: clamp(9px, 2.2vw, 13px);
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: clamp(14px, 3vw, 16px);
+  font-size: clamp(15px, 3.2vw, 17px);
   font-family: inherit;
   background: #fff;
   box-sizing: border-box;
@@ -804,7 +804,7 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: clamp(12px, 2.5vw, 14px);
+  font-size: clamp(13px, 2.7vw, 15px);
   color: #333;
   cursor: pointer;
 }
@@ -817,10 +817,10 @@ body {
 
 .form-group textarea {
   width: 100%;
-  padding: clamp(8px, 2vw, 12px);
+  padding: clamp(9px, 2.2vw, 13px);
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: clamp(14px, 3vw, 16px);
+  font-size: clamp(15px, 3.2vw, 17px);
   font-family: inherit;
   background: #fff;
   resize: none;
