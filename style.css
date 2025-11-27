@@ -840,11 +840,11 @@ body {
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
-  margin-top: clamp(4px, 1vw, 6px);
+  margin-top: clamp(2px, 0.5vw, 4px);
 }
 
 .contact-submit-btn img {
-  width: clamp(200px, 50vw, 260px);
+  width: clamp(180px, 45vw, 240px);
   height: auto;
   display: block;
 }
