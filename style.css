@@ -61,7 +61,7 @@ body {
   filter: brightness(1.7) saturate(0.35);
 
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 
   transform: translateZ(0);
   will-change: transform;
