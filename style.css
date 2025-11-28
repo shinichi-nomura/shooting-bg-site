@@ -743,14 +743,12 @@ body {
    お問い合わせフォーム 画像
 ========================= */
 .contact-form-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
-  background: white;
 }
 
 .contact-form-wrapper {
