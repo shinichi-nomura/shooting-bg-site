@@ -234,13 +234,11 @@ body {
    お問い合わせボタン
 ========================= */
 .contact-button-section {
-  position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
   padding: clamp(30px, 6vh, 50px) 0;
   margin: 0 auto;
-  background: white;
 }
 
 .contact-button {
@@ -477,13 +475,11 @@ body {
    1日の流れ 画像
 ========================= */
 .flow-daily-section {
-  position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
-  background: white;
 }
 
 .flow-daily-image {
@@ -517,14 +513,12 @@ body {
    ご利用の流れ 画像
 ========================= */
 .flow-contact-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(20px, 4vh, 40px);
   margin: 0 auto;
-  background: white;
 }
 
 .flow-contact-image {
@@ -540,7 +534,6 @@ body {
    矢印 画像
 ========================= */
 .flow-arrow-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -548,7 +541,6 @@ body {
   padding: clamp(30px, 6vh, 60px) 0;
   margin: 0 auto;
   text-align: center;
-  background: white;
 }
 
 .flow-arrow-image {
@@ -562,14 +554,12 @@ body {
    見学・体験 画像
 ========================= */
 .flow-visit-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(20px, 4vh, 40px);
   margin: 0 auto;
-  background: white;
 }
 
 .flow-visit-image {
@@ -585,7 +575,6 @@ body {
    相談・申し込み 画像
 ========================= */
 .flow-consult-apply-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -593,7 +582,6 @@ body {
   padding: 0 0 clamp(20px, 4vh, 40px);
   margin: 0 auto;
   text-align: center;
-  background: white;
 }
 
 .flow-consult-apply-image {
@@ -609,7 +597,6 @@ body {
    利用開始 画像
 ========================= */
 .flow-start-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -617,7 +604,6 @@ body {
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
   text-align: center;
-  background: white;
 }
 
 .flow-start-image {
@@ -651,14 +637,12 @@ body {
    クリエイティブチーム 画像
 ========================= */
 .team-creative-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
-  background: white;
 }
 
 .team-creative-image {
@@ -676,14 +660,12 @@ body {
    オフィスチーム 画像
 ========================= */
 .team-office-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
-  background: white;
 }
 
 .team-office-image {
@@ -701,14 +683,12 @@ body {
    お問い合わせタイトル 画像
 ========================= */
 .contact-title-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(30px, 6vh, 60px);
   margin: 0 auto;
-  background: white;
 }
 
 .contact-title-image {
@@ -891,7 +871,6 @@ body {
   width: 100%;
   padding: clamp(50px, 10vh, 100px) 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
-  background: white;
 }
 
 .contact-phone-link {
@@ -923,14 +902,12 @@ body {
    お待ちしています 画像
 ========================= */
 .contact-thanks-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(60px, 12vh, 120px);
   margin: 0 auto;
-  background: white;
 }
 
 .contact-thanks-image {
