@@ -253,6 +253,7 @@ body {
   display: block;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  background-color: white;
 }
 
 .contact-button:hover {
@@ -488,6 +489,7 @@ body {
   display: block;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  background-color: white;
 }
 
 /* =========================
@@ -528,6 +530,7 @@ body {
   margin: 0 auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  background-color: white;
 }
 
 /* =========================
@@ -548,6 +551,7 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
+  background-color: white;
 }
 
 /* =========================
@@ -569,6 +573,7 @@ body {
   margin: 0 auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  background-color: white;
 }
 
 /* =========================
@@ -591,6 +596,7 @@ body {
   margin: 0 auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  background-color: white;
 }
 
 /* =========================
@@ -613,6 +619,7 @@ body {
   margin: 0 auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  background-color: white;
 }
 
 /* =========================
@@ -654,6 +661,7 @@ body {
   margin-right: auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  background-color: white;
 }
 
 /* =========================
@@ -677,6 +685,7 @@ body {
   margin-right: auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  background-color: white;
 }
 
 /* =========================
@@ -698,6 +707,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
 }
 
 /* =========================
@@ -748,6 +758,7 @@ body {
   margin: 0 auto; /* ←中央寄せ */
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  background-color: white;
 }
 
 .contact-form-overlay {
@@ -847,6 +858,7 @@ body {
   width: clamp(180px, 45vw, 240px);
   height: auto;
   display: block;
+  background-color: white;
 }
 
 .contact-submit-btn:hover {
@@ -896,6 +908,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
 }
 
 /* =========================
@@ -917,6 +930,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
 }
 
 /* TOPへロボ */
