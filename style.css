@@ -125,11 +125,14 @@ body {
    ロゴの下のフレーム（テキスト版）
 ========================= */
 .about-frame {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   width: 100%;
   margin-top: -40px;
   margin-bottom: 20px;
+  background: white;
 }
 
 .about-frame__container {
@@ -234,11 +237,14 @@ body {
    お問い合わせボタン
 ========================= */
 .contact-button-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   width: 100%;
   padding: clamp(30px, 6vh, 50px) 0;
   margin: 0 auto;
+  background: white;
 }
 
 .contact-button {
@@ -253,7 +259,6 @@ body {
   display: block;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  background-color: white;
 }
 
 .contact-button:hover {
@@ -269,9 +274,12 @@ body {
    レッスンタイトル
 ========================= */
 .lesson-title-section {
+  position: relative;
+  z-index: 1;
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
+  background: white;
 }
 
 .lesson-title {
@@ -288,6 +296,7 @@ body {
 .lesson-wrapper {
   position: relative;
   z-index: 3;
+  background: white;
 }
 
 .lesson-grid {
@@ -459,9 +468,12 @@ body {
    一日の流れ タイトル
 ========================= */
 .flow-title-section {
+  position: relative;
+  z-index: 1;
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
+  background: white;
 }
 
 .flow-title {
@@ -476,11 +488,14 @@ body {
    1日の流れ 画像
 ========================= */
 .flow-daily-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
+  background: white;
 }
 
 .flow-daily-image {
@@ -489,18 +504,20 @@ body {
   display: block;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  background-color: white;
 }
 
 /* =========================
    ご利用の流れ タイトル
 ========================= */
 .flow-usage-title-section {
+  position: relative;
+  z-index: 1;
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
   display: flex;
   justify-content: center;
+  background: white;
 }
 
 .flow-usage-title {
@@ -515,12 +532,15 @@ body {
    ご利用の流れ 画像
 ========================= */
 .flow-contact-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(20px, 4vh, 40px);
   margin: 0 auto;
+  background: white;
 }
 
 .flow-contact-image {
@@ -530,13 +550,14 @@ body {
   margin: 0 auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  background-color: white;
 }
 
 /* =========================
    矢印 画像
 ========================= */
 .flow-arrow-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -544,6 +565,7 @@ body {
   padding: clamp(30px, 6vh, 60px) 0;
   margin: 0 auto;
   text-align: center;
+  background: white;
 }
 
 .flow-arrow-image {
@@ -551,19 +573,21 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  background-color: white;
 }
 
 /* =========================
    見学・体験 画像
 ========================= */
 .flow-visit-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(20px, 4vh, 40px);
   margin: 0 auto;
+  background: white;
 }
 
 .flow-visit-image {
@@ -573,13 +597,14 @@ body {
   margin: 0 auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  background-color: white;
 }
 
 /* =========================
    相談・申し込み 画像
 ========================= */
 .flow-consult-apply-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -587,6 +612,7 @@ body {
   padding: 0 0 clamp(20px, 4vh, 40px);
   margin: 0 auto;
   text-align: center;
+  background: white;
 }
 
 .flow-consult-apply-image {
@@ -596,13 +622,14 @@ body {
   margin: 0 auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  background-color: white;
 }
 
 /* =========================
    利用開始 画像
 ========================= */
 .flow-start-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -610,6 +637,7 @@ body {
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
   text-align: center;
+  background: white;
 }
 
 .flow-start-image {
@@ -619,16 +647,18 @@ body {
   margin: 0 auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  background-color: white;
 }
 
 /* =========================
    利用者さんの声 タイトル
 ========================= */
 .user-voice-title-section {
+  position: relative;
+  z-index: 1;
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
+  background: white;
 }
 
 .user-voice-title {
@@ -644,12 +674,15 @@ body {
    クリエイティブチーム 画像
 ========================= */
 .team-creative-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
+  background: white;
 }
 
 .team-creative-image {
@@ -661,19 +694,21 @@ body {
   margin-right: auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  background-color: white;
 }
 
 /* =========================
    オフィスチーム 画像
 ========================= */
 .team-office-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
+  background: white;
 }
 
 .team-office-image {
@@ -685,19 +720,21 @@ body {
   margin-right: auto;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  background-color: white;
 }
 
 /* =========================
    お問い合わせタイトル 画像
 ========================= */
 .contact-title-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(30px, 6vh, 60px);
   margin: 0 auto;
+  background: white;
 }
 
 .contact-title-image {
@@ -707,18 +744,20 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
 }
 
 /* =========================
    お問合せ タイトル
 ========================= */
 .contact-form-title-section {
+  position: relative;
+  z-index: 1;
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
   display: flex;
   justify-content: center;
+  background: white;
 }
 
 .contact-form-title {
@@ -733,12 +772,15 @@ body {
    お問い合わせフォーム 画像
 ========================= */
 .contact-form-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
+  background: white;
 }
 
 .contact-form-wrapper {
@@ -758,7 +800,6 @@ body {
   margin: 0 auto; /* ←中央寄せ */
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  background-color: white;
 }
 
 .contact-form-overlay {
@@ -858,7 +899,6 @@ body {
   width: clamp(180px, 45vw, 240px);
   height: auto;
   display: block;
-  background-color: white;
 }
 
 .contact-submit-btn:hover {
@@ -883,6 +923,7 @@ body {
   width: 100%;
   padding: clamp(50px, 10vh, 100px) 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
+  background: white;
 }
 
 .contact-phone-link {
@@ -908,19 +949,21 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
 }
 
 /* =========================
    お待ちしています 画像
 ========================= */
 .contact-thanks-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 0 clamp(60px, 12vh, 120px);
   margin: 0 auto;
+  background: white;
 }
 
 .contact-thanks-image {
@@ -930,7 +973,6 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
 }
 
 /* TOPへロボ */
