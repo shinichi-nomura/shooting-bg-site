@@ -43,8 +43,6 @@ body {
 
   padding-top: 7svh;
   padding-bottom: clamp(96px, 18vh, 160px);
-
-  z-index: 2;
 }
 
 /* 背景アニメ */
