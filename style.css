@@ -125,11 +125,14 @@ body {
    ロゴの下のフレーム（テキスト版）
 ========================= */
 .about-frame {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   width: 100%;
   margin-top: -40px;
   margin-bottom: 20px;
+  background: white;
 }
 
 .about-frame__container {
@@ -235,6 +238,7 @@ body {
 ========================= */
 .contact-button-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -270,9 +274,12 @@ body {
    レッスンタイトル
 ========================= */
 .lesson-title-section {
+  position: relative;
+  z-index: 1;
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
+  background: white;
 }
 
 .lesson-title {
@@ -289,6 +296,7 @@ body {
 .lesson-wrapper {
   position: relative;
   z-index: 3;
+  background: white;
 }
 
 .lesson-grid {
@@ -460,9 +468,12 @@ body {
    一日の流れ タイトル
 ========================= */
 .flow-title-section {
+  position: relative;
+  z-index: 1;
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
+  background: white;
 }
 
 .flow-title {
@@ -478,6 +489,7 @@ body {
 ========================= */
 .flow-daily-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -498,11 +510,14 @@ body {
    ご利用の流れ タイトル
 ========================= */
 .flow-usage-title-section {
+  position: relative;
+  z-index: 1;
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
   display: flex;
   justify-content: center;
+  background: white;
 }
 
 .flow-usage-title {
@@ -518,6 +533,7 @@ body {
 ========================= */
 .flow-contact-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -541,6 +557,7 @@ body {
 ========================= */
 .flow-arrow-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -563,6 +580,7 @@ body {
 ========================= */
 .flow-visit-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -586,6 +604,7 @@ body {
 ========================= */
 .flow-consult-apply-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -610,6 +629,7 @@ body {
 ========================= */
 .flow-start-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -633,9 +653,12 @@ body {
    利用者さんの声 タイトル
 ========================= */
 .user-voice-title-section {
+  position: relative;
+  z-index: 1;
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
+  background: white;
 }
 
 .user-voice-title {
@@ -652,6 +675,7 @@ body {
 ========================= */
 .team-creative-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -677,6 +701,7 @@ body {
 ========================= */
 .team-office-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -702,6 +727,7 @@ body {
 ========================= */
 .contact-title-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -724,11 +750,14 @@ body {
    お問合せ タイトル
 ========================= */
 .contact-form-title-section {
+  position: relative;
+  z-index: 1;
   width: 100%;
   text-align: center;
   padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
   display: flex;
   justify-content: center;
+  background: white;
 }
 
 .contact-form-title {
@@ -744,6 +773,7 @@ body {
 ========================= */
 .contact-form-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -926,6 +956,7 @@ body {
 ========================= */
 .contact-thanks-section {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
