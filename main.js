@@ -85,3 +85,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// ハンバーガーメニューの制御
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-list a');
+  
+  // ハンバーガーメニューボタンのクリック
+  hamburgerMenu.addEventListener('click', () => {
+    hamburgerMenu.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+  
+  // ナビゲーションリンクのクリックでメニューを閉じる
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburgerMenu.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+  
+  // メニュー外をクリックしたら閉じる
+  document.addEventListener('click', (e) => {
+    if (!hamburgerMenu.contains(e.target) && !navMenu.contains(e.target)) {
+      hamburgerMenu.classList.remove('active');
+      navMenu.classList.remove('active');
+    }
+  });
+});
