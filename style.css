@@ -1183,15 +1183,15 @@ body {
 }
 
 .nav-robot-girl {
-  width: 40px;
+  width: 60px;
   height: auto;
   margin-right: 1rem;
   flex-shrink: 0;
 }
 
 .nav-robot-boy-item {
-  text-align: center;
-  padding: 1rem 0 0.5rem;
+  text-align: left;
+  padding: 1rem 0 0.5rem 2rem;
   pointer-events: none;
   list-style: none;
 }
