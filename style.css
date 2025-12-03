@@ -41,7 +41,7 @@ body {
   text-align: center;
   overflow: hidden;
 
-  padding-top: 1svh;
+  padding-top: 0.3svh;
   padding-bottom: clamp(96px, 18vh, 160px);
 }
 
