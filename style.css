@@ -982,7 +982,7 @@ body {
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 }
 
