@@ -1100,6 +1100,15 @@ body {
   font-size: 1.3rem;
   margin: 0 0 0.5rem 0;
   font-weight: bold;
+  line-height: 1.6;
+}
+
+.footer-title-main {
+  font-size: 1.3rem;
+}
+
+.footer-title-sub {
+  font-size: 1rem;
 }
 
 .footer-subtitle {
