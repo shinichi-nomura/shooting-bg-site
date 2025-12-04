@@ -1098,8 +1098,15 @@ body {
 
 .footer-title {
   font-size: 1.3rem;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
   font-weight: bold;
+}
+
+.footer-subtitle {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  font-weight: normal;
+  opacity: 0.95;
 }
 
 .footer-address {
