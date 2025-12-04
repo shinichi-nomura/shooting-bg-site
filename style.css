@@ -1187,6 +1187,7 @@ body {
   height: auto;
   margin-right: 1rem;
   flex-shrink: 0;
+  animation: float-girl 3s ease-in-out infinite;
 }
 
 .nav-robot-boy-item {
@@ -1200,4 +1201,37 @@ body {
   width: 50px;
   height: auto;
   display: inline-block;
+  animation: float-boy 3.5s ease-in-out infinite;
+}
+
+/* ロボットガールの揺れアニメーション */
+@keyframes float-girl {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+}
+
+/* ロボットボーイの揺れアニメーション */
+@keyframes float-boy {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-6px) rotate(-2deg);
+  }
+  60% {
+    transform: translateY(0) rotate(0deg);
+  }
+  80% {
+    transform: translateY(-6px) rotate(2deg);
+  }
 }
