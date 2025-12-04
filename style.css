@@ -279,6 +279,21 @@ body {
   color: #333;
   margin: 0;
   line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.lesson-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
+  border-radius: 2px;
 }
 
 /* =========================
@@ -469,6 +484,21 @@ body {
   color: #333;
   margin: 0;
   line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.flow-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
+  border-radius: 2px;
 }
 
 /* =========================
@@ -507,6 +537,21 @@ body {
   color: #333;
   margin: 0 auto;
   line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.flow-usage-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
+  border-radius: 2px;
 }
 
 /* =========================
@@ -631,6 +676,21 @@ body {
   margin: 0;
   line-height: 1.5;
   text-align: center;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.user-voice-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
+  border-radius: 2px;
 }
 
 /* =========================
@@ -717,6 +777,21 @@ body {
   color: #333;
   margin: 0 auto;
   line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.contact-form-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
+  border-radius: 2px;
 }
 
 /* =========================
@@ -1088,6 +1163,21 @@ body {
   color: #333;
   margin: 0;
   line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.access-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
+  border-radius: 2px;
 }
 
 .access-map-section {
