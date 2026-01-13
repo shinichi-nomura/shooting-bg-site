@@ -31,7 +31,7 @@ body {
 ========================= */
 .hero {
   position: relative;
-  min-height: 100dvh;
+  /* min-height: 100dvh; */
 
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@ body {
   text-align: center;
   overflow: hidden;
 
-  min-height: 100vh;
+  min-height: calc(100vh - 0.35rem);
   padding-top: 0;
   padding-bottom: clamp(96px, 18vh, 160px);
 }
@@ -107,7 +107,7 @@ body {
 .hero-logo {
   position: absolute;
   left: 50%;
-  bottom: clamp(35px, 17vh, 180px);
+  bottom: clamp(10px, 10vh, 100px);
 
   transform: translate3d(-50%, 0, 0);
   z-index: 4;
@@ -159,31 +159,34 @@ body {
 }
 
 .about-frame__title {
-  font-size: clamp(18px, 4.5vw, 26px);
+  /* font-size: clamp(18px, 4.5vw, 26px); */
+  font-size: clamp(22px, 5.2vw, 30px);
   font-weight: bold;
   color: #333;
-  margin: 0 0 6%;
+  margin: 0 6%;
   line-height: 1.5;
 }
 
 .about-frame__intro {
   font-size: clamp(15px, 4vw, 18px);
   color: #111;
-  margin: 0 0 5%;
+  margin: 4% 0;
   line-height: 1.8;
 }
 
 .about-frame__mission {
-  font-size: clamp(12px, 3vw, 15px);
+  /* font-size: clamp(12px, 3vw, 15px); */
+  font-size: clamp(14px, 3.6vw, 18px);
   color: #333;
-  margin: 0 0 6%;
+  margin: 6% 0 6%;
   line-height: 1.8;
 }
 
 .about-frame__value {
-  font-size: clamp(11px, 2.8vw, 14px);
+  /* font-size: clamp(11px, 2.8vw, 14px); */
+   font-size: clamp(13px, 3.2vw, 17px);
   color: #333;
-  margin: 0 0 4%;
+  margin: 0 2%;
   line-height: 1.8;
 }
 
@@ -206,14 +209,16 @@ body {
 }
 
 .about-frame__concept {
-  font-size: clamp(12px, 3vw, 15px);
+  /* font-size: clamp(12px, 3vw, 15px); */
+  font-size: clamp(14px, 3.6vw, 18px);
   color: #333;
   margin: 6% 0 5%;
   line-height: 1.8;
 }
 
 .about-frame__message {
-  font-size: clamp(11px, 2.8vw, 14px);
+  /* font-size: clamp(11px, 2.8vw, 14px); */
+  font-size: clamp(13px, 3.2vw, 17px);
   color: #333;
   margin: 0;
   line-height: 1.8;
@@ -372,7 +377,6 @@ body {
 ========================= */
 @media (min-width: 768px) {
   .hero {
-    padding-top: 8dvh;
     min-height: 100dvh;
     padding-bottom: clamp(120px, 18vh, 210px);
   }
