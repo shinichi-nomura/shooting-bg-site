@@ -351,6 +351,7 @@ body {
 .lesson-accordion__body {
   overflow: hidden;
   height: 0;
+  transition: height 0.28s ease;
 }
 
 .lesson-accordion__panel {
@@ -358,13 +359,13 @@ body {
   width: 100%;
   height: auto;
 
-  transform: scaleY(0);
-  transform-origin: top;
+  /* transform: scaleY(0); */
+  /* transform-origin: top; */
 
   opacity: 0;
-  transition: transform 0.28s ease, opacity 0.28s ease;
+  /* transition: transform 0.28s ease, opacity 0.28s ease; */
 
-  will-change: transform, opacity;
+  /* will-change: transform, opacity; */
 }
 
 .lesson-accordion.is-open .lesson-accordion__panel {
