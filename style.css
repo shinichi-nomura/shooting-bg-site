@@ -456,21 +456,23 @@ body {
   }
 
   .hero picture {
-    width: 100vw;
-    display: block;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .hero-illust {
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     object-fit: cover;
     object-position: center center;
-    transform: none;
   }
 }
 
