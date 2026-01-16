@@ -455,9 +455,8 @@ body {
     width: 100vw;
     max-width: 100vw;
     object-fit: cover;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    object-position: center center;
+    margin-left: calc(50% - 50vw);
   }
 }
 
