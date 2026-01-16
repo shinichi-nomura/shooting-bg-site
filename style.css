@@ -451,8 +451,13 @@ body {
       PC画面用（1024px以上）
 ========================= */
 @media (min-width: 1024px) {
+  .hero {
+    overflow: visible;
+  }
+
   .hero picture {
     width: 100vw;
+    display: block;
     position: relative;
     left: 50%;
     right: 50%;
