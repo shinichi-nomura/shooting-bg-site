@@ -451,12 +451,20 @@ body {
       PC画面用（1024px以上）
 ========================= */
 @media (min-width: 1024px) {
-  .hero-illust {
+  .hero picture {
     width: 100vw;
-    max-width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  .hero-illust {
+    width: 100%;
+    max-width: 100%;
     object-fit: cover;
     object-position: center center;
-    margin-left: calc(50% - 50vw);
   }
 }
 
