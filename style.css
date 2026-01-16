@@ -106,7 +106,7 @@ body {
 .hero-logo {
   position: absolute;
   bottom: 15%;
-  left: 50%;
+  left: 35%;
   transform: translateX(-50%);
   z-index: 4;
   width: clamp(300px, 40vw, 600px);
