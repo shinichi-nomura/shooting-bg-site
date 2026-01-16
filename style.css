@@ -451,28 +451,14 @@ body {
       PC画面用（1024px以上）
 ========================= */
 @media (min-width: 1024px) {
-  .hero {
-    overflow: visible;
-  }
-
-  .hero picture {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   .hero-illust {
     width: 100vw;
-    height: 100%;
-    position: absolute;
+    position: relative;
     left: 50%;
-    transform: translateX(-50%);
-    object-fit: cover;
-    object-position: center center;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    transform: none;
   }
 }
 
