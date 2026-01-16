@@ -448,21 +448,6 @@ body {
 }
 
 /* =========================
-      PC画面用（1024px以上）
-========================= */
-@media (min-width: 1024px) {
-  .hero-illust {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    transform: none;
-  }
-}
-
-/* =========================
       iPhone SE 調整
 ========================= */
 @media (max-height: 700px) and (max-width: 767px) {
