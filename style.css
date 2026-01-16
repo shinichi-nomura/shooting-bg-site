@@ -452,8 +452,11 @@ body {
 ========================= */
 @media (min-width: 1024px) {
   .hero-illust {
-    height: auto;
+    width: 100%;
+    height: auto !important;
+    max-height: none;
     object-fit: contain;
+    object-position: center top;
   }
 }
 
