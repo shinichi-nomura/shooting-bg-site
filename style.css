@@ -448,6 +448,16 @@ body {
 }
 
 /* =========================
+      PC画面用（1024px以上）
+========================= */
+@media (min-width: 1024px) {
+  .hero-illust {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* =========================
       iPhone SE 調整
 ========================= */
 @media (max-height: 700px) and (max-width: 767px) {
