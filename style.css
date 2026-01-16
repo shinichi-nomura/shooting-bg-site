@@ -102,15 +102,14 @@ body {
   transform: translate(-0.05%);
 }
 
-/* ロゴ（hero-visual2.pngに統合されたため不要） */
-/* .hero-logo {
+/* ロゴ */
+.hero-logo {
   position: absolute;
-  bottom: clamp(10px, 10%, 100px);
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 4;
-  width: clamp(300px, 60vw, 700px);
+  width: clamp(300px, 40vw, 600px);
   height: auto;
 
   will-change: transform, opacity;
@@ -119,7 +118,7 @@ body {
 
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18))
     drop-shadow(0 8px 18px rgba(0, 0, 0, 0.14));
-} */
+}
 
 /* =========================
    ロゴの下のフレーム（テキスト版）
