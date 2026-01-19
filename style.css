@@ -26,6 +26,12 @@ body {
   background: #fff;
 }
 
+.underline { 
+  display: inline; 
+  border-bottom: 4px solid #ff9b42; 
+  line-height: 1; 
+  padding-bottom: 2px; /* 必要に応じて調整 */ 
+}
 /* =========================
     HERO（背景・ロゴ）
 ========================= */
@@ -305,7 +311,7 @@ body {
   padding-bottom: 15px;
 }
 
-.lesson-title::after {
+/* .lesson-title::after {
   content: '';
   position: absolute;
   bottom: 6px;
@@ -314,7 +320,7 @@ body {
   height: 4px;
   background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
   border-radius: 2px;
-}
+} */
 
 /* =========================
       アコーディオン 2列
@@ -516,9 +522,8 @@ body {
    一日の流れ タイトル
 ========================= */
 .flow-title-section {
-  width: 100%;
+  white-space: nowrap;
   text-align: center;
-  padding: clamp(20px, 4vh, 40px) 0 clamp(20px, 3vh, 30px);
 }
 
 .flow-title {
@@ -532,34 +537,57 @@ body {
   padding-bottom: 15px;
 }
 
-.flow-title::after {
-  content: '';
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
-  border-radius: 2px;
+.underline { 
+  display: inline; 
+  border-bottom: 4px solid #ff9b42; 
+  line-height: 1; 
+  padding-bottom: 2px; /* 必要に応じて調整 */ 
 }
-
 /* =========================
    1日の流れ 画像
 ========================= */
 .flow-daily-section {
   display: flex;
   justify-content: center;
-  width: 100%;
-  padding: 0 0 clamp(40px, 8vh, 80px);
-  margin: 0 auto;
 }
 
 .flow-daily-image {
   width: clamp(350px, 80vw, 550px);
   height: auto;
-  display: block;
-  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  border-radius: 4px; */
+}
+@media (min-width: 768px) {
+  .flow-section {
+    width: 100%;
+  }
+
+  .flow-inner {
+    display: flex;
+    width: 100%;
+  }
+
+  .flow-title-section,
+  .flow-daily-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+  }
+
+  .flow-title {
+    display: inline-block; 
+    text-align: center;
+  }
+
+  .flow-daily-section {
+    padding: 0 0 clamp(40px, 8vh, 80px);
+    margin: 0 auto;
+  }
+
+  .flow-daily-image {
+    width: clamp(350px, 80vw, 550px);
+    height: auto;
+    display: block;
+  }
 }
 
 /* =========================
@@ -584,7 +612,7 @@ body {
   display: inline-block;
   padding-bottom: 15px;
 }
-
+/* 
 .flow-usage-title::after {
   content: '';
   position: absolute;
@@ -594,7 +622,7 @@ body {
   height: 4px;
   background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
   border-radius: 2px;
-}
+} */
 
 /* =========================
    ご利用の流れ 画像
@@ -723,7 +751,7 @@ body {
   padding-bottom: 15px;
 }
 
-.user-voice-title::after {
+/* .user-voice-title::after {
   content: '';
   position: absolute;
   bottom: 6px;
@@ -732,7 +760,7 @@ body {
   height: 4px;
   background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
   border-radius: 2px;
-}
+} */
 
 /* =========================
    クリエイティブチーム 画像
@@ -823,7 +851,7 @@ body {
   padding-bottom: 15px;
 }
 
-.contact-form-title::after {
+/* .contact-form-title::after {
   content: '';
   position: absolute;
   bottom: 6px;
@@ -832,7 +860,7 @@ body {
   height: 4px;
   background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
   border-radius: 2px;
-}
+} */
 
 /* =========================
    お問い合わせフォーム 画像
@@ -1208,7 +1236,7 @@ body {
   padding-bottom: 15px;
 }
 
-.access-title::after {
+/* .access-title::after {
   content: '';
   position: absolute;
   bottom: 6px;
@@ -1217,7 +1245,7 @@ body {
   height: 4px;
   background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
   border-radius: 2px;
-}
+} */
 
 .access-map-section {
   width: 100%;
