@@ -119,6 +119,22 @@ body {
 
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18))
     drop-shadow(0 8px 18px rgba(0, 0, 0, 0.14));
+
+  /* アニメーション */
+  animation: logoFadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+/* ロゴのフェードイン＋スライドアップアニメーション */
+@keyframes logoFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 /* =========================
