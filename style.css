@@ -64,8 +64,8 @@ body {
 
   animation: flow 120s linear infinite;
 
-  opacity: 0.28;
-  filter: brightness(1.7) saturate(0.35);
+  opacity: 0.4;
+  filter: brightness(1.5) saturate(0.5);
 
   pointer-events: none;
   z-index: -1;
