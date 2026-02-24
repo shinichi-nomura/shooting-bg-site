@@ -100,7 +100,6 @@ body {
   position: relative;
   z-index: 2;
   pointer-events: none;
-  /* width: 100.1%; */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -163,7 +162,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   aspect-ratio: 512 / 870;
-  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); */
 }
 
 .about-frame__content {
@@ -278,8 +276,6 @@ body {
   width: clamp(350px, 80vw, 550px);
   height: auto;
   display: block;
-  /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-  border-radius: 4px; */
 }
 
 .contact-button:hover {
@@ -311,17 +307,6 @@ body {
   padding-bottom: 15px;
 }
 
-/* .lesson-title::after {
-  content: '';
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
-  border-radius: 2px;
-} */
-
 /* =========================
       アコーディオン 2列
 ========================= */
@@ -335,7 +320,6 @@ body {
   grid-template-columns: 1fr 1fr;
   column-gap: 14px;
   row-gap: 20px;
-
   max-width: 430px;
   padding: 16px;
   margin: 0 auto;
@@ -363,8 +347,6 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
-
-  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
 }
 
 /* パネルアニメ（scaleY） */
@@ -472,7 +454,7 @@ body {
 /* =========================
       PC画面用（1024px以上）
 ========================= */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .hero {
     min-height: auto !important;
   }
@@ -490,7 +472,7 @@ body {
   .hero-logo {
     display: block;
   }
-}
+} */
 
 /* =========================
       iPhone SE 調整
@@ -612,17 +594,6 @@ body {
   display: inline-block;
   padding-bottom: 15px;
 }
-/* 
-.flow-usage-title::after {
-  content: '';
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
-  border-radius: 2px;
-} */
 
 /* =========================
    ご利用の流れ 画像
@@ -641,8 +612,6 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  border-radius: 4px; */
 }
 
 /* =========================
@@ -682,8 +651,6 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  border-radius: 4px; */
 }
 
 /* =========================
@@ -704,8 +671,6 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  border-radius: 4px; */
 }
 
 /* =========================
@@ -726,8 +691,6 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  border-radius: 4px; */
 }
 
 /* =========================
@@ -750,64 +713,57 @@ body {
   display: inline-block;
   padding-bottom: 15px;
 }
-
-/* .user-voice-title::after {
-  content: '';
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
-  border-radius: 2px;
-} */
-
+.team-image {
+  display: none;
+}
 /* =========================
    クリエイティブチーム 画像
 ========================= */
 .team-creative-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  width: 100%; 
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
+  text-align: center;
 }
 
 .team-creative-image {
   width: 100%;
   max-width: clamp(350px, 80vw, 550px);
   height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  border-radius: 4px; */
+  display: inline-block;
 }
 
 /* =========================
    オフィスチーム 画像
 ========================= */
 .team-office-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   padding: 0 0 clamp(40px, 8vh, 80px);
   margin: 0 auto;
+  text-align: center;
 }
 
 .team-office-image {
   width: 100%;
   max-width: clamp(350px, 80vw, 550px);
   height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  border-radius: 4px; */
+  display: inline-block;
 }
 
+@media (min-width: 768px) {
+  .team-image{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+  }
+  .team-image > section {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+}
+ 
 /* =========================
    お問い合わせタイトル 画像
 ========================= */
@@ -851,17 +807,6 @@ body {
   padding-bottom: 15px;
 }
 
-/* .contact-form-title::after {
-  content: '';
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
-  border-radius: 2px;
-} */
-
 /* =========================
    お問い合わせフォーム 画像
 ========================= */
@@ -882,15 +827,13 @@ body {
   margin: 0 auto;
 }
 
-.contact-form-bg {
-  width: auto !important;
-  height: auto !important;
-  max-width: none !important;
-  max-height: none !important;
+.contact-form-section .contact-form-bg {
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
   display: block;
-  margin: 0 auto; /* ←中央寄せ */
-  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12); */
-  /* border-radius: 4px; */
+  margin: 0 auto;
 }
 
 .contact-form-overlay {
@@ -1001,6 +944,7 @@ body {
   transform: translateY(0);
   opacity: 1;
 }
+
 
 /* =========================
    お電話でのお問い合わせ 画像
@@ -1251,7 +1195,6 @@ body {
   .nav-list a:hover { 
     background: none; 
     border-left-color: transparent; 
-    padding: 0.5rem 0;
  }
 
   .nav-robot-girl,
@@ -1278,17 +1221,6 @@ body {
   display: inline-block;
   padding-bottom: 15px;
 }
-
-/* .access-title::after {
-  content: '';
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff9b42 0%, #ff7b1c 100%);
-  border-radius: 2px;
-} */
 
 .access-map-section {
   width: 100%;
