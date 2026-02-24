@@ -21,8 +21,8 @@
         <nav class="nav-menu">
           <ul class="nav-list">
             <li><a href="#top">top</a></li>
-            <li><a href="#about">はっぴぃたいむについて</a></li>
-            <li><a href="#lessons">はっぴぃたいむのお仕事で学べること</a></li>
+            <li><a href="#about">はっぴぃたいむとは</a></li>
+            <li><a href="#lessons">コース一覧</a></li>
             <li class="nav-item-with-robot">
               <a href="#flow">一日の流れ</a>
               <img src="images/robot-girl-balloon.png" alt="ロボットガール" class="nav-robot-girl" loading="lazy" />
@@ -42,11 +42,14 @@
     <main class="page">
       <!-- ===== HEROセクション ===== -->
       <section class="hero" id="top">
-        <img
-          class="hero-illust"
-          src="images/hero-visual.png"
-          alt="Hero Visual"
-        />
+        <picture>
+          <source media="(min-width: 1024px)" srcset="images/hero-pc.png">
+          <img
+            class="hero-illust"
+            src="images/hero-visual2.png"
+            alt="Hero Visual"
+          />
+        </picture>
         <img
           class="hero-logo"
           src="images/logo-happytimes-websolutions.png"
@@ -388,6 +391,7 @@
       </section>
 
       <!-- ===== クリエイティブチーム 画像 ===== -->
+      <div class="team-image">
       <section class="team-creative-section">
         <img src="images/team-creative.png" alt="クリエイティブチーム" class="team-creative-image" loading="lazy" />
       </section>
@@ -396,7 +400,7 @@
       <section class="team-office-section">
         <img src="images/team-office.png" alt="オフィスチーム" class="team-office-image" loading="lazy" />
       </section>
-
+      </div>
       <!-- ===== お問い合わせタイトル 画像 ===== -->
       <section class="contact-title-section">
         <img src="images/contact-title.png" alt="いまのおきもちは？" class="contact-title-image" loading="lazy" />
